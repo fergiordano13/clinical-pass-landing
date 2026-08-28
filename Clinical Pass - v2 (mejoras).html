@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membresía Clinical Pass | Health Service Alliance</title>
+<meta name="description" content="Recupera hasta $55,000 pesos de tu deducible y coaseguro por solo $1,800 al año. Clinical Pass, el beneficio complementario a tu Seguro de Gastos Médicos Mayores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-primary:#0B4AA2;
+    --blue-primary-hover:#093E88;
+    --blue-deep:#063178;
+    --blue-dark:#0E1B33;
+    --blue-banner:#0041B1;
+    --gold:#C89B3C;
+    --text-soft:#5B6579;
+    --bg-light:#F5FAFD;
+    --pale:#E9F1FC;
+    --white:#FFFFFF;
+    --border-soft:#E3EAF4;
+    --green:#1F9D66;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --shadow-card:0 10px 30px rgba(11,42,97,0.06);
+    --shadow-lift:0 24px 55px rgba(11,42,97,0.14);
+    --container:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--blue-dark);background:#fff;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;margin:0;padding:0;}
+  button{font-family:inherit;cursor:pointer;}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+  section{padding:88px 0;}
+  #inicio{padding-top:44px;}
+  .section-bg-light{background:var(--bg-light);}
+  h1,h2,h3{margin:0;font-weight:800;letter-spacing:-0.02em;}
+  h2{font-size:40px;line-height:1.15;color:var(--blue-dark);}
+  .accent{color:var(--blue-primary);}
+  p{margin:0;color:var(--text-soft);line-height:1.55;font-size:16.5px;}
+  .lede{font-size:18px;line-height:1.55;color:var(--text-soft);max-width:540px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue-primary);margin-bottom:20px;}
+  .eyebrow::before{content:"";width:20px;height:2px;background:var(--gold);flex-shrink:0;}
+  .center-head{text-align:center;max-width:700px;margin:0 auto;}
+  .center-head .eyebrow{margin-left:auto;margin-right:auto;}
+  .center-head h2{margin-bottom:16px;}
+  .center-head p{margin:0 auto;}
+
+  /* header */
+  header.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-soft);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:var(--container);margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-text{line-height:1.05;}
+  .logo-text .l1{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--blue-primary);}
+  .logo-text .l2{display:block;font-size:18px;font-weight:800;letter-spacing:.02em;color:var(--blue-primary);}
+  nav.main-nav{display:flex;align-items:center;gap:28px;}
+  nav.main-nav a{font-size:14.5px;font-weight:500;color:var(--blue-dark);padding:6px 2px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s ease;}
+  nav.main-nav a:hover{color:var(--blue-primary);}
+  .header-actions{display:flex;align-items:center;gap:14px;}
+  .menu-toggle{display:none;background:none;border:none;padding:6px;}
+  .btn.btn-dark{background:var(--blue-dark);color:#fff;border-radius:var(--radius-md);}
+  .btn-dark:hover{background:#0A1526;}
+  .whatsapp-link{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;color:#0E1B33;flex-shrink:0;}
+  .whatsapp-link:hover{opacity:.7;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14.5px;font-weight:600;padding:13px 26px;border-radius:var(--radius-md);border:1.5px solid transparent;transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;white-space:nowrap;}
+  .btn-primary{background:var(--blue-primary);color:#fff;}
+  .btn-primary:hover{background:var(--blue-primary-hover);box-shadow:0 10px 24px rgba(11,74,162,.3);}
+  .btn-outline{background:transparent;color:var(--blue-primary);border-color:var(--border-soft);}
+  .btn-outline:hover{border-color:var(--blue-primary);}
+  .btn-white{background:#fff;color:var(--blue-primary);}
+  .btn-white:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.18);}
+  .btn-sm{padding:11px 20px;font-size:13.5px;}
+  .btn-lg{padding:17px 32px;font-size:16px;}
+  .btn-block{width:100%;}
+
+  .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+
+  /* hero */
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  .combo-btn{display:inline-flex;align-items:stretch;border-radius:var(--radius-md);overflow:hidden;background:var(--blue-dark);border:none;padding:0;}
+  .combo-btn .txt{padding:14px 26px;color:#fff;font-weight:600;font-size:15px;display:flex;flex-direction:column;justify-content:center;gap:2px;line-height:1.25;text-align:left;}
+  .combo-btn .txt span{white-space:nowrap;}
+  .combo-btn .price{padding:14px 26px;background:rgba(255,255,255,.10);color:#fff;font-weight:800;font-size:26px;display:flex;flex-direction:column;justify-content:center;line-height:1.05;text-align:left;}
+  .combo-btn .price small{display:block;font-weight:500;font-size:10.5px;color:#8FB0E8;margin-top:3px;}
+  .link-secondary{display:inline-flex;align-items:center;color:var(--blue-primary);font-weight:600;font-size:14.5px;border-bottom:1.5px solid var(--border-soft);padding-bottom:2px;}
+  .link-secondary:hover{border-color:var(--blue-primary);}
+
+  .trust-bar{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{padding:4px 24px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;border-right:1px solid var(--border-soft);}
+  .trust-item:first-child{padding-left:0;}
+  .trust-item:last-child{border-right:none;}
+  .trust-item .ic{color:var(--blue-primary);}
+  .trust-item h4{margin:0;font-size:14.5px;font-weight:700;}
+  .trust-item p{font-size:13px;line-height:1.5;}
+
+  .media-frame{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:4/3.4;background:linear-gradient(135deg,#DCE9FB,#F3F8FE);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lift);}
+  .media-frame .ph-icon{opacity:.35;color:var(--blue-primary);}
+  .media-frame img{width:100%;height:100%;object-fit:cover;}
+  .media-frame .ph-label{position:absolute;bottom:20px;left:20px;right:20px;background:rgba(6,49,120,0.55);color:#fff;font-size:12px;padding:9px 14px;border-radius:10px;line-height:1.5;backdrop-filter:blur(4px);}
+  .mx-map-frame{background:linear-gradient(135deg,#F3F8FE,#EAF1FC);padding:36px;overflow:visible;}
+  .mx-map-frame .mx-map{width:100%;height:auto;max-width:490px;}
+  .mx-map-kicker{position:absolute;top:24px;left:28px;display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--blue-primary);}
+  .mx-map-kicker-dash{width:16px;height:2px;background:var(--gold);flex-shrink:0;}
+  .mx-map-chip{position:absolute;bottom:20px;left:20px;background:#fff;color:var(--blue-dark);font-size:12.5px;font-weight:700;padding:9px 14px;border-radius:10px;line-height:1.5;box-shadow:var(--shadow-card);}
+  .roi-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-lift);text-align:center;}
+  .roi-badge .n{font-size:22px;font-weight:800;color:var(--blue-primary);line-height:1;}
+  .roi-badge .l{font-size:10.5px;color:var(--text-soft);font-weight:600;letter-spacing:.02em;}
+
+  /* two col reused */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+
+  /* pain icon list */
+  .icon-list{display:grid;gap:26px;margin-top:32px;}
+  .icon-list.cols-5{grid-template-columns:repeat(2,1fr);}
+  .icon-list .icon-circle{width:52px;height:52px;border-radius:50%;background:var(--pale);display:flex;align-items:center;justify-content:center;color:var(--blue-primary);margin-bottom:12px;}
+  .icon-list.cols-5 .icon-circle{background:none;width:auto;height:auto;border-radius:0;margin-bottom:10px;display:inline-flex;justify-content:flex-start;}
+  .icon-list h4{font-size:15px;font-weight:700;margin:0 0 5px;}
+  .icon-list p{font-size:13.4px;line-height:1.5;}
+
+  /* pricing card */
+  .pricing-wrap{display:flex;justify-content:center;margin-top:48px;}
+  .price-card{background:#fff;border:1.5px solid var(--border-soft);border-radius:32px;box-shadow:var(--shadow-lift);max-width:920px;width:100%;padding:0;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
+  .price-card-left{background:var(--blue-dark);color:#fff;padding:64px 44px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .price-card-left .tag{font-size:12px;font-weight:700;letter-spacing:.08em;color:#B9C9E6;margin-bottom:18px;}
+  .price-card-left .big-price{font-size:52px;font-weight:900;line-height:1;color:#fff;}
+  .price-card-left .big-price sup{font-size:22px;font-weight:700;top:-1.2em;}
+  .price-card-left .per-year{font-size:15px;color:#B9C9E6;margin-top:12px;}
+  .price-card-left .monthly-eq{margin-top:14px;font-size:13.5px;color:#B9C9E6;display:block;}
+  .price-card-left .roi-line{margin-top:44px;padding-top:34px;border-top:1px solid rgba(255,255,255,.14);}
+  .price-card-left .roi-line .roi-num{font-size:26px;font-weight:800;color:var(--gold);}
+  .price-card-left .roi-line p{color:#B9C9E6;font-size:13.5px;margin-top:4px;}
+  .price-card-right{padding:48px 44px;}
+  .price-card-right h3{font-size:19px;margin-bottom:20px;}
+  .plan-features{display:flex;flex-direction:column;gap:15px;margin-bottom:28px;}
+  .plan-features li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--blue-dark);line-height:1.5;}
+  .plan-features li svg{flex-shrink:0;margin-top:2px;color:var(--green);}
+  .plan-note{font-size:12.5px;color:var(--text-soft);margin-top:16px;line-height:1.6;}
+
+  /* how it works numbered */
+  .steps-vert{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+  .step-row{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--border-soft);}
+  .step-row:last-child{border-bottom:none;}
+  .step-num{width:36px;font-weight:800;font-size:17px;color:var(--blue-primary);flex-shrink:0;border-bottom:2px solid var(--gold);padding-bottom:8px;height:fit-content;}
+  .step-row h4{font-size:16.5px;font-weight:700;margin:0 0 6px;}
+  .step-row p{font-size:14.5px;}
+
+  /* guarantee */
+  .trust-list{display:flex;flex-direction:column;gap:30px;margin-top:32px;}
+  .trust-block{display:flex;gap:18px;align-items:flex-start;}
+  .trust-block .ic-round{width:auto;height:auto;border-radius:0;background:none;flex-shrink:0;display:inline-flex;align-items:flex-start;justify-content:flex-start;color:var(--blue-primary);margin-top:2px;}
+  .trust-block h3{font-size:17px;font-weight:700;margin:0 0 6px;}
+  .trust-block p{font-size:14px;line-height:1.6;}
+
+  /* faq accordion */
+  .faq-list{max-width:820px;margin:44px auto 0;}
+  .faq-item{border-bottom:1px solid var(--border-soft);}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 4px;cursor:pointer;font-size:16px;font-weight:700;color:var(--blue-dark);}
+  .faq-q svg{flex-shrink:0;transition:transform .2s ease;color:var(--blue-primary);}
+  .faq-item.open .faq-q svg{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .faq-item.open .faq-a{max-height:300px;}
+  .faq-a p{padding:0 4px 22px;font-size:14.8px;}
+
+  /* final cta */
+  .final-cta{background:var(--blue-dark);color:#fff;border-radius:var(--radius-lg);padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .final-cta h2{color:#fff;font-size:32px;}
+  .final-cta p{color:#C7D2E6;margin-top:10px;max-width:420px;}
+
+  /* modal */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(6,20,45,.55);z-index:300;align-items:center;justify-content:center;padding:20px;}
+  .modal-overlay.open{display:flex;}
+  .modal-box{background:#fff;border-radius:24px;max-width:420px;width:100%;padding:36px;text-align:center;position:relative;}
+  .modal-box .ic-round{width:56px;height:56px;border-radius:50%;background:var(--pale);color:var(--blue-primary);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+  .modal-box h3{font-size:20px;margin-bottom:10px;}
+  .modal-box p{font-size:14.5px;margin-bottom:24px;}
+  .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text-soft);}
+
+  /* contact form */
+  .lead-form{background:#fff;border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-lift);max-width:400px;width:100%;}
+  .lead-form h3{font-size:17px;margin-bottom:16px;}
+  .field-label{display:block;font-size:12px;font-weight:600;color:var(--blue-dark);margin-bottom:6px;}
+  .lead-form input,.lead-form textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border-soft);border-radius:10px;font-family:inherit;font-size:14px;margin-bottom:12px;color:var(--blue-dark);}
+  .lead-form input:focus,.lead-form textarea:focus{outline:none;border-color:var(--blue-primary);}
+  .form-note{font-size:12px;color:#8FB0E8;margin-top:10px;text-align:center;}
+
+  .card-grid{display:grid;gap:22px;margin-top:40px;}
+  #red-hospitalaria .feat-card{background:none;border:none;box-shadow:none;padding:0;}
+  #red-hospitalaria .feat-card .ic-square{background:none;width:auto;height:auto;border-radius:0;margin-bottom:14px;display:inline-flex;justify-content:flex-start;}
+  .card-grid.cols-3{grid-template-columns:repeat(3,1fr);}
+  .feat-card{background:#fff;border:1px solid var(--border-soft);border-radius:var(--radius-md);padding:28px 24px;box-shadow:var(--shadow-card);}
+  .feat-card .ic-square{width:46px;height:46px;border-radius:14px;background:var(--pale);display:flex;align-items:center;justify-content:center;color:var(--blue-primary);margin-bottom:16px;}
+  .feat-card h4{font-size:15.5px;font-weight:700;margin:0 0 8px;}
+  .feat-card p{font-size:13.8px;}
+  .testimonial-card{background:var(--pale);border:none;border-left:3px solid var(--gold);box-shadow:none;border-radius:4px var(--radius-md) var(--radius-md) 4px;padding:32px 28px;}
+  .testimonial-card .quote-mark{font-family:Georgia,'Times New Roman',serif;font-size:52px;line-height:1;color:var(--blue-primary);opacity:.28;display:block;margin-bottom:2px;}
+  .testimonial-card p{margin-bottom:22px;}
+  .testimonial-attr{display:flex;align-items:center;gap:12px;}
+  .testimonial-photo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#DCE9FB,#F3F8FE);border:1px solid var(--border-soft);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#9AAAC7;text-align:center;line-height:1.2;}
+  .testimonial-attr h4{margin-bottom:2px;}
+  .testimonial-city{display:block;font-size:12px;color:var(--text-soft);}
+  .insurer-row{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;}
+  .insurer-logo{flex:1;min-width:140px;max-width:180px;height:64px;background:var(--pale);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#9AAAC7;font-size:11px;font-weight:700;letter-spacing:.06em;}
+
+  .map-callout{display:flex;align-items:center;gap:16px;background:var(--pale);border-radius:var(--radius-md);padding:22px 24px;margin-top:26px;max-width:420px;}
+  .map-callout .ic-round{width:46px;height:46px;border-radius:50%;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--blue-primary);}
+  .map-callout p{font-size:14px;line-height:1.5;color:var(--blue-dark);}
+
+  .legal-box{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,.25);border-radius:14px;padding:18px 20px;font-size:12px;line-height:1.7;color:#8493B3;margin-top:36px;}
+  .legal-box strong{color:#B9C9E6;}
+
+  footer.site-footer{background:var(--blue-dark);color:#C7D2E6;padding:72px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px;}
+  footer .logo-text .l1{color:#8FB0E8;}
+  footer .logo-text .l2{color:#fff;}
+  footer p.foot-desc{color:#9AAAC7;font-size:14px;line-height:1.7;margin-top:16px;max-width:280px;}
+  footer h5{color:#fff;font-size:14px;margin:0 0 18px;}
+  footer ul li{margin-bottom:12px;}
+  footer ul li a{color:#AEBBD6;font-size:14px;}
+  footer ul li a:hover{color:#fff;}
+  .footer-bottom{margin-top:20px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:#8493B3;}
+
+  @media (max-width:1080px){
+    .icon-list.cols-5{grid-template-columns:repeat(3,1fr);}
+    .card-grid.cols-3{grid-template-columns:repeat(1,1fr);}
+    .trust-bar{grid-template-columns:repeat(2,1fr);}
+    .trust-item:nth-child(2){border-right:none;}
+    .trust-item{border-bottom:1px solid var(--border-soft);}
+    .price-card{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:920px){
+    nav.main-nav{display:none;}
+    .menu-toggle{display:flex;}
+    h2{font-size:30px;}
+    .hero-grid,.two-col{grid-template-columns:1fr;gap:36px;}
+    .hero-grid .col-media,.two-col .col-media{order:-1;}
+    .lede{max-width:100%;}
+    section{padding:60px 0;}
+    .final-cta{flex-direction:column;text-align:center;}
+    .final-cta .btn{width:100%;}
+  }
+  @media (max-width:620px){
+    .wrap{padding:0 20px;}
+    .header-inner{padding:14px 20px;}
+    .icon-list.cols-5,.trust-bar{grid-template-columns:1fr;}
+    .trust-item{border-right:none;}
+    h2{font-size:26px;}
+    .cta-row{flex-direction:column;align-items:stretch;}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+    .btn-sm{display:none;}
+    .price-card-left,.price-card-right{padding:34px 26px;}
+  }
+
+  .mobile-nav{display:none;position:fixed;inset:0;background:#fff;z-index:200;padding:20px;overflow-y:auto;}
+  .mobile-nav.open{display:block;}
+  .mobile-nav-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;}
+  .mobile-nav ul{display:flex;flex-direction:column;gap:4px;}
+  .mobile-nav a{display:block;padding:16px 4px;font-size:17px;font-weight:600;border-bottom:1px solid var(--border-soft);}
+  .mobile-nav .btn{margin-top:24px;width:100%;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#inicio" class="logo">
+      <img src="img/hsa-icon.png" alt="Health Service Alliance" style="height:36px;width:auto;">
+      <span class="logo-text"><span class="l1">HEALTH SERVICE ALLIANCE</span><span class="l2">CLINICAL PASS</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#membresia">Membresía</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#red-hospitalaria">Red hospitalaria</a>
+      <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#membresia" class="btn btn-dark btn-sm">Obtener membresía</a>
+      <!-- ⚠ PENDIENTE — número de WhatsApp de ejemplo (5218000000000), sustituir por el real antes de publicar. -->
+      <a href="https://wa.me/5218000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-link" aria-label="Escríbenos por WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.36.66 4.56 1.8 6.44L4 29l7.73-1.74a11.9 11.9 0 0 0 4.28.79h.01c6.63 0 12.01-5.38 12.01-12.01C28.03 8.38 22.65 3 16.01 3Zm0 21.94h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-4.59 1.03 1.06-4.47-.24-.38a9.9 9.9 0 0 1-1.52-5.32c0-5.48 4.46-9.94 9.95-9.94 2.66 0 5.15 1.04 7.03 2.92a9.87 9.87 0 0 1 2.91 7.03c0 5.48-4.46 9.94-9.94 9.94Zm5.45-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+      </a>
+      <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#0E1B33" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span style="display:flex;align-items:center;gap:10px;">
+      <img src="img/hsa-icon.png" alt="Health Service Alliance" style="height:32px;width:auto;">
+      <span class="logo-text"><span class="l1">HEALTH SERVICE ALLIANCE</span><span class="l2">CLINICAL PASS</span></span>
+    </span>
+    <button class="menu-toggle" style="display:flex" onclick="document.getElementById('mobileNav').classList.remove('open')">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#0E1B33" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <ul onclick="document.getElementById('mobileNav').classList.remove('open')">
+    <li><a href="#beneficios">Beneficios</a></li>
+    <li><a href="#membresia">Membresía</a></li>
+    <li><a href="#como-funciona">Cómo funciona</a></li>
+    <li><a href="#red-hospitalaria">Red hospitalaria</a></li>
+    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+  </ul>
+  <a href="#membresia" class="btn btn-primary">Obtener membresía</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="inicio" class="section-bg-light">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="col-text">
+        <span class="eyebrow">MEMBRESÍA CLINICAL PASS</span>
+        <h1 style="font-size:48px;line-height:1.14;">Recupera hasta <span class="accent">$55,000 pesos</span> de tu deducible y coaseguro.</h1>
+        <p class="lede" style="margin-top:20px;">Clinical Pass es el beneficio complementario a tu Seguro de Gastos Médicos Mayores que financia lo que tu póliza no cubre, justo cuando más lo necesitas.</p>
+        <div class="cta-row" style="align-items:center;">
+          <button class="combo-btn" onclick="openModal()">
+            <span class="txt"><span>Obtener mi</span><span>membresía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="margin-left:2px;vertical-align:-2px;"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="price">$1,800<small>MXN / año</small></span>
+          </button>
+          <a href="#contacto" class="link-secondary">Hablar con un asesor</a>
+        </div>
+      </div>
+      <div class="col-media">
+        <div class="media-frame">
+          <div class="roi-badge"><div class="n">$55K</div><div class="l">RESPALDO<br>MÁXIMO</div></div>
+          <img src="img/hero-concierge-paciente-familiar.png" alt="Concierge médico de Clinical Pass acompañando a un paciente y a un familiar en el lobby de un hospital">
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-item"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 10h16M4 10v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8M4 10l1.5-4.5A1 1 0 0 1 6.45 5h11.1a1 1 0 0 1 .95.68L20 10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></div><h4>Fondeo directo a tu cuenta</h4><p>El dinero se transfiere directo a tu cuenta bancaria, no es un cupón ni un reembolso lento.</p></div>
+      <div class="trust-item"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></div><h4>Trámite 100% gestionado</h4><p>Nosotros hacemos la gestión completa con tu aseguradora, tú solo compartes tus documentos.</p></div>
+      <div class="trust-item"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h4>Cancela cuando quieras</h4><p>Sin permanencia forzosa ni penalizaciones.</p></div>
+      <div class="trust-item"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15M14 21v-9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h4>Red en convenio</h4><p>Hospitales de alta especialidad en todo México.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section id="beneficios">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text" style="order:2;">
+        <span class="eyebrow">EL COSTO QUE MUCHOS ASEGURADOS DESCUBREN TARDE</span>
+        <h2>Tu seguro paga mucho.<br><span class="accent">Tu bolsillo, también.</span></h2>
+        <p class="lede" style="margin-top:20px;">Tener un Seguro de Gastos Médicos Mayores es fundamental, pero incluso con él, existen gastos que quedan fuera de la cobertura y que debes cubrir de tu bolsillo, justo en el momento menos oportuno.</p>
+        <div class="icon-list cols-5">
+          <div><div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 12.2h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16.2" cy="12.2" r=".9" fill="currentColor"/></svg></div><h4>Deducible</h4><p>El monto que pagas antes de que tu seguro empiece a cubrir.</p></div>
+          <div><div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm8 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h4>Coaseguro</h4><p>El % del gasto que te corresponde cubrir a ti.</p></div>
+          <div><div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 8h13M13 4l4 4-4 4M20 16H7M11 12l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>Desvíos</h4><p>Gastos por decisiones médicas necesarias no cubiertas.</p></div>
+          <div><div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v6.5L5.5 18a2 2 0 0 0 1.8 2.9h9.4a2 2 0 0 0 1.8-2.9L14 9.5V3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div><h4>Estudios</h4><p>Análisis y laboratorios que pueden no estar cubiertos al 100%.</p></div>
+          <div><div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 21V9.5a1 1 0 0 1 .5-.87l7-4a1 1 0 0 1 1 0l7 4a1 1 0 0 1 .5.87V21" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 21h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 8v6M9 11h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h4>Hospitalización</h4><p>Habitación, servicios o tratamientos adicionales.</p></div>
+        </div>
+      </div>
+      <div class="col-media" style="order:1;">
+        <div class="media-frame">
+          <img src="img/beneficios-asesor-pareja.png" alt="Asesor de Clinical Pass mostrando el estado de cuenta hospitalario a una pareja en la recepción del hospital">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO / OFERTA -->
+<section id="membresia" class="section-bg-light">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">TU MEMBRESÍA</span>
+      <h2>Un plan. Un precio.<br><span class="accent">Un respaldo real.</span></h2>
+      <p>Sin niveles, sin letras chiquitas: un único plan pensado para complementar tu Seguro de Gastos Médicos Mayores.</p>
+    </div>
+
+    <div class="pricing-wrap">
+      <div class="price-card">
+        <div class="price-card-left">
+          <img src="img/hsa-icon-white.png" alt="Health Service Alliance" style="height:60px;width:auto;margin-bottom:10px;display:block;align-self:center;">
+          <span style="align-self:center;font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;margin-bottom:44px;">HEALTH SERVICE ALLIANCE</span>
+          <span class="tag">MEMBRESÍA CLINICAL PASS</span>
+          <div class="big-price">$1,800<sup>MXN</sup></div>
+          <div class="per-year">al año, por titular</div>
+          <span class="monthly-eq">Equivale a $150 pesos al mes</span>
+          <div class="roi-line">
+            <div class="roi-num">$10,000 – $55,000</div>
+            <p>Respaldo en deducible y coaseguro, según el tipo de servicio y el hospital de la red donde te atiendas.</p>
+          </div>
+        </div>
+        <div class="price-card-right">
+          <h3>¿Qué incluye tu membresía?</h3>
+          <ul class="plan-features">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Descuento aplicado directo a tu deducible o coaseguro</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fondeo por transferencia bancaria a tu cuenta al darte de alta del hospital</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin examen médico previo para activarla</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un asesor te contacta en menos de 24 horas</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Concierge Médico: acompañamiento antes, durante y después</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Gestión completa de trámites con tu aseguradora</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso a nuestra red de hospitales en convenio</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancelación flexible, sin permanencia forzosa</li>
+          </ul>
+          <button class="btn btn-dark btn-block btn-lg" onclick="openModal()">Obtener mi membresía</button>
+          <p class="plan-note">Aplica únicamente si cuentas con un Seguro de Gastos Médicos Mayores vigente. Clinical Pass complementa tu póliza, no la sustituye.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text">
+        <span class="eyebrow">UN PROCESO SIMPLE, HUMANO Y CONFIABLE</span>
+        <h2>Así se activa tu<br><span class="accent">respaldo, paso a paso.</span></h2>
+        <p class="lede" style="margin-top:18px;">Nuestro equipo se encarga de la gestión. Tú solo nos compartes tus documentos y nosotros hacemos el resto.</p>
+        <div class="media-frame" style="margin-top:32px;aspect-ratio:4/3.4;">
+          <img src="img/comofunciona-asesor-padre-hijo.png" alt="Asesor de Clinical Pass caminando junto a un padre y su hijo, explicándoles el proceso paso a paso en el pasillo del hospital">
+        </div>
+      </div>
+      <div class="col-media">
+        <div class="steps-vert">
+          <div class="step-row"><div class="step-num">01</div><div><h4>Adquieres tu membresía</h4><p>Activas Clinical Pass por $1,800 al año y quedas listo para usarla en tu próxima cirugía o procedimiento.</p></div></div>
+          <div class="step-row"><div class="step-num">02</div><div><h4>Programas tu procedimiento</h4><p>Gestionas con tu agente de seguros la carta autorización de tu aseguradora para la cirugía o tratamiento.</p></div></div>
+          <div class="step-row"><div class="step-num">03</div><div><h4>Nos compartes tus documentos</h4><p>Carta autorización, INE, orden de internamiento del cirujano y tu póliza vigente. Activamos atención 24/7.</p></div></div>
+          <div class="step-row"><div class="step-num">04</div><div><h4>Te acompañamos en tu estancia</h4><p>Damos seguimiento personalizado durante toda tu hospitalización.</p></div></div>
+          <div class="step-row"><div class="step-num">05</div><div><h4>Calculamos y transferimos tu fondeo</h4><p>Al alta, revisamos tu estado de cuenta y tu póliza, y transferimos el fondeo a tu cuenta para cubrir lo que te corresponde.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RED HOSPITALARIA (se mantiene tal cual) -->
+<section id="red-hospitalaria" class="section-bg-light">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text">
+        <span class="eyebrow">NUESTRA RED EN TODO MÉXICO</span>
+        <h2>Siempre cerca de ti,<br>donde <span class="accent">más lo necesitas.</span></h2>
+        <p class="lede" style="margin-top:20px;">Clinical Pass pone a tu disposición una amplia red de hospitales de alta especialidad distribuidos estratégicamente en todo México, para brindarte respaldo cuando una cirugía o procedimiento médico lo requiera.</p>
+        <a href="#membresia" class="btn btn-dark" style="margin-top:26px;" onclick="openModal()">Obtener mi membresía</a>
+      </div>
+      <div class="col-media">
+        <div class="media-frame mx-map-frame">
+          <span class="mx-map-kicker"><span class="mx-map-kicker-dash"></span>COBERTURA POR ESTADO</span>
+          <span class="mx-map-chip">47 hospitales · 17 estados</span>
+          <svg class="mx-map" xmlns="http://www.w3.org/2000/svg" viewBox="-210 -20 1063 540" width="1063" height="540">
+  <line x1="369.3" y1="332.9" x2="60" y2="330" stroke="#B9C9E6" stroke-width="2.2"/>
+  <circle cx="60" cy="330" r="4.5" fill="#B9C9E6"/>
+  <line x1="464.1" y1="206.4" x2="600" y2="130" stroke="#B9C9E6" stroke-width="2.2"/>
+  <circle cx="600" cy="130" r="4.5" fill="#B9C9E6"/>
+  <line x1="475" y1="392" x2="380" y2="480" stroke="#B9C9E6" stroke-width="2.2"/>
+  <circle cx="380" cy="480" r="4.5" fill="#B9C9E6"/>
+  <path d="m 390.52786,309.79244 -2.34,-2.26 -0.07,-1.21 1.24,-2.87 3.33,-4.59 0.93,-3.24 1.07,-0.73 1.79,-0.38 3.47,-1.97 1.21,-0.92 0.39,-1.26 0.73,-0.17 0.77,1.39 1.33,1.34 4.44,2.63 0.59,2.44 1.14,2.04 0,0 0.26,0.59 -0.24,1.6 1.96,2.14 -4.28,1.97 -2.55,3.55 -0.72,0.5 -3.02,1.04 -1.26,0.06 -2.17,-1.02 -1.74,-1.41 -4.21,-0.38 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 106.48786,137.85244 -0.65,0 0,0 -0.76,0.12 0.13,0.44 -0.82,0.41 -0.68,0.01 -0.75,0.86 -0.29,-0.74 0.19,-0.78 3.08,-3.76 0.62,-0.15 0.06,0.97 -0.8,0.76 -0.02,0.52 0.69,1.34 z m -27.349998,-11.99 0.56,0.45 0.75,2.86 -0.25,1.02 0.38,2.42 -0.68,0.9 0.04,2.09 -0.62,-0.19 -0.54,0.33 -0.65,-0.31 -0.6,-1.42 -0.58,-0.18 -1,0.6 -0.37,-0.15 0.07,-0.78 2.73,-3.03 0.15,-0.68 -0.58,-1.61 0.51,-1.89 0.68,-0.43 z m 58.139998,-8.56 0.82,0.18 2.68,2.27 -0.54,0.47 -0.6,-0.96 -1.69,-0.95 -0.67,-1.01 z m 8.46,-1.5 0.34,0.64 -0.27,1.02 -1.16,0.04 -0.35,-1.56 1.44,-0.14 z m -142.8599978,-13.07 -0.64,1.32 0.15,1.03 1.31,1.2 0.23,2.9 -0.67,2.08 -0.75,0.23 -0.56,-1.47 0.21,-0.92 -0.56,-0.37 -0.07,-1.6 -1.24000002,-1.24 0.35,-1 -0.29,-0.96 0.74000002,-0.62 0.8,0.04 0.99,-0.62 z M 120.65786,92.442438 l -0.02,0.48 1.1,-0.48 0.02,0.32 0.93,0.26 1.27,1.64 0.77,0.39 1.06,2.21 -0.59,0.86 0.12,1.17 1.84,0.830002 2.9,-0.180002 0.34,0.300002 -0.17,4.33 0.62,1.71 1.2,0.37 -0.34,1.9 -2.96,-2.09 -1.72,-2.42 -2.56,-1.82 -0.96,-1.88 -1.37,-0.26 -0.24,-1.090002 -2.04,-2.47 -0.16,-0.86 0.77,-1.87 -0.21,-0.98 0.4,-0.37 z m -21.549998,-12.53 0.64,0.81 -0.45,0.14 -0.34,-0.36 0.15,-0.59 z m -9.92,-73.05 -0.85,0.51 -0.47,-0.4 -1.34,0.01 -0.6,2.05 -0.47,0.48 -0.05,1.34 -1.81,2.43 1.4,1.99 -0.62,1.83 0.29,1.14 -0.42,2.67 0.24,0.98 -0.6,0.98 0.96,0.95 0.92,0.13 3.82,2.76 0,0 -0.47,1.74 0.92,4 -1.12,1.46 -0.74,2.41 -0.08,3.53 -0.85,3.16 0.3,0.65 -0.25,2.22 0.62,2.21 1.37,1.26 -0.52,0.66 -0.02,0.65 2.84,1.84 0.59,3.53 -0.08,5.21 1.72,4.04 0.02,2.21 -0.35,1.3 0.21,0.82 -0.52,1.95 0.37,0.33 -0.65,2.16 1,2.06 0.62,0.38 1.73,4 1.23,0.61 0.3,0.9 0.96,0.15 0.64,0.89 -0.02,1.82 0.45,0.94 0.819998,0.32 0.44,0.72 1.17,0.12 0.34,-0.86 1.81,0.78 1.21,1.54 0.31,-0.06 0.96,1.18 0.94,0.48 0.68,1.13 1.62,0.83 2.09,2.34 1.52,0.83 0.11,0.61 1.44,0.69 1.98,2.47 1.44,1.170002 0.3,0.88 -0.73,0.85 0.01,0.48 2.08,2.55 0.79,1.64 -0.58,1.16 0.45,1.64 -0.33,0.25 0.81,1.69 0.82,0.1 0.53,-0.7 -0.41,-0.38 0.42,-0.62 0.48,0.27 0.47,-0.36 0.41,0.8 0.6,-0.12 -0.04,0.41 0.45,0.12 0.12,2.09 0.39,0.95 1.1,-0.03 1.31,-1.04 1.08,0.62 1.43,4.51 0.77,0.82 0.59,3.53 2.58,1.46 2.44,-0.59 0.48,0.36 0.07,0.73 0.81,-0.15 0.11,0.6 -0.36,0.48 0.25,0.66 -0.59,2.6 1.97,2.8 -0.47,2.03 0.62,1.45 -0.39,1.24 0.93,0.57 0.27,0.99 -0.3,2.49 0,0 -0.64,-1.71 -0.87,-0.26 0,0 -31.69,-0.11 0.23,-0.53 -0.35,-0.49 -0.05,-1.32 0.86,1.21 0.79,-1.39 -1.61,-0.41 -0.35,-1.72 1.52,-2.99 -0.42,-0.96 -0.88,0.53 -0.51,-0.49 1.28,-2.91 0.65,-3.16 -1.27,-2.19 -1.56,-0.63 -0.07,-2.03 -0.44,-0.43 -2.2,-0.1 0.01,-0.81 -0.45,-0.52 -1.54,-0.86 0.12,-0.59 -0.46,-1.17 -0.879998,-0.47 -0.56,-1.87 -0.46,-0.07 -0.23,-0.6 -0.96,-0.73 -0.97,-0.07 -0.17,0.33 -0.52,-1.09 -0.68,-0.44 -0.23,0.3 -0.54,-2.72 -0.64,-1.05 -1.06,-0.47 -0.64,0.34 -0.8,-0.98 -0.25,-1.35 -1.16,-0.55 -0.12,-0.37 -0.45,0.03 -3.43,-4.210002 -2.91,-1.5 -3.06,-0.4 -1.55,-2.51 -2.41,-1.18 -0.76,-0.03 -2,-1.92 -1.19,0.25 -2,-2.17 -0.89,-0.1 -1.88,-1.56 0.25,-2.52 -0.33,-1.5 -1.14,-1.62 -1.57,-0.58 0.62,-3.57 -0.54,-1.2 0.02,-4.19 -1.46,-2.55 -2.06,-1.24 0.19,-1.4 -0.82,-0.77 -0.23,0.4 0.5,0.94 -0.5,0.35 -0.46,-0.7 -0.53,0 0.58,1.34 -0.31,0.1 -1.06,-2.05 0.57,-5.32 -0.63,-3.55 -0.53,-1.05 -0.6,-0.08 -1.44,-1.26 -0.53,0.01 -2.3,-3.02 -1.55,0.2 -0.25,-0.46 0.74,-5.28 -1.38,-2.71 -2.09,-2.2 -1.85,-3.14 -1.29,-0.96 -0.68,0.08 -0.18,-1 -1.27,-0.92 -0.27,-0.72 -0.41,0.08 -0.12,-0.58 1.02,-0.52 -0.44,-0.9 0.47,-1.24 -1.17,-1.61 -0.33,0.14 -0.85,-1 0.45,-0.1 1.6,0.89 1.05,-0.96 0.19,-2.58 -0.4,-0.61 -1.26,-0.27 -0.57,-0.77 -1.15,-0.2 -0.41,-1.83 -0.48,-0.4 -1.23,0 -1.23,-1.18 -0.12,-3.02 -0.81,-2.83 -0.47,-0.75 -2.1,-0.71 -0.48,-0.56 -2.14,-5.9 0.04,-1.34 60.19,-5.54 -1.58,2.83 -0.67,0.19 0.5,1.79 -0.35,0.24 -0.3,1.52 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 91.057862,397.56244 1.49,0.37 -0.48,0.42 -1.32,0.17 -0.12,-0.73 0.43,-0.23 z m 93.899998,-12.95 1.03,0.69 0.7,1.07 -0.01,1.76 -0.83,0.41 -0.44,-0.69 -1.15,-0.2 -0.81,-1.31 1.51,-1.73 z m 4.73,-12.33 0.23,0.65 -0.46,0.66 -0.29,-0.57 0.52,-0.74 z m 21.73,-135.15 2.79,4.59 0.44,1.91 -1.56,-0.29 -0.71,-1.05 -1.1,-3.81 0.14,-1.35 z m -51.48,-4.14 3.12,0.16 1.11,1.44 0.94,0.11 0.81,0.62 1.33,2.43 -0.35,0.83 -6.92,-5.03 -0.31,-0.34 0.27,-0.22 z m 40.73,-0.24 1.77,1.59 -0.93,2.03 -0.54,0.03 0.04,-0.83 -0.73,-0.26 0.12,-0.5 -0.46,-0.58 0.18,-0.67 -0.27,-0.46 0.82,-0.35 z m -0.86,-1.58 0.87,1.34 -0.59,0.33 -0.62,-0.36 -0.1,-0.78 0.44,-0.53 z m -7.78,-14.08 0.92,1.45 1.98,0.54 0.42,0.6 0.06,1.54 0.97,2.16 -0.47,0.09 -2.64,-2.04 -0.68,-2.02 -0.89,-0.9 0.33,-1.42 z m -35.67,-4.58 0.21,1.38 -1.1,3.4 0.11,3.08 -0.76,0.68 0.66,1.33 -0.33,1.14 -0.63,0.07 -0.31,0.53 0.16,0.72 1.14,1.27 -0.16,0.29 0.93,0.82 0.44,1.34 -0.67,1.1 0.92,0.78 1.25,1.81 -0.07,0.38 -1.06,-0.54 -0.05,-0.66 -1.78,-1.9 0.19,-0.53 0.57,0.08 0.22,-0.54 -0.12,-1.07 -0.8,-0.98 -1.33,-0.69 -1.22,0.37 -0.7,-0.45 -0.04,-0.58 0.41,-0.08 1.95,-5.17 1.97,-7.38 z m 36.07,-1.13 -0.45,1.2 -0.52,0.24 -0.15,-0.74 1.12,-0.7 z m -35.23,-4.93 -0.16,4.42 -0.37,1.37 -0.5,-0.35 1.03,-5.44 z m 0.06,-5.2 0.16,2.08 -0.17,2.51 -0.28,0.01 0.29,-4.6 z m 33.06,-0.92 0.31,3.3 -0.71,-0.44 -0.4,-1.4 0.8,-1.46 z m -6.54,-0.04 0.54,1.25 -0.33,0.51 -0.41,-0.2 -0.41,-1.41 0.61,-0.15 z m -0.66,-9.78 -0.5,1.02 0.4,1.67 -1.2,-0.74 -1.71,2.67 0,0.92 -0.56,0.55 0,0.68 -0.6,0.05 -0.13,-0.76 0.4,-0.45 0.18,-1.68 1.05,-1.74 -0.19,-1.46 0.98,-0.25 0.18,-0.43 0.64,0.4 1.06,-0.45 z m -5.19,-1.89 0.18,0.79 -0.45,0.05 -0.17,-0.54 0.44,-0.3 z m -49.09,-16.53 1.34,0.32 0.75,1.57 -0.96,-0.63 -1.97,-0.48 -0.12,-0.28 0.96,-0.5 z m 28.56,-14.77 1.06,1 -0.34,1.22 -0.62,-0.16 -0.5,-1.41 0.4,-0.65 z m 5.07,-5.51 0.42,0.05 0.28,0.62 -0.93,0.04 -0.18,-0.46 0.41,-0.25 z m -83.339998,-12.4 1.37,0.75 -0.1,0.53 -1.37,-1.02 0.1,-0.26 z m 26.709998,-1.56 0.65,0 0,0 0.41,0.41 0.29,-0.41 31.7,0.1 0,0 0.87,0.26 0.64,1.71 0,0 -0.07,0.5 1.29,1.03 0.4,1.96 1.08,1.29 0.42,-0.04 1.23,1.7 2.78,0.86 0.54,0.62 0.94,0.15 1.61,1.11 0.71,0.96 0.7,3.73 1.64,1.81 0.97,2.21 -0.41,0.76 2.6,2.1 2.54,0.65 0.47,0.57 0.93,-0.01 0.15,0.73 -0.57,0.03 -0.89,1.04 -0.23,1.58 1.68,2.42 0.9,0.46 0.04,0.46 0.92,0.66 0.33,1.37 -0.7,0.55 -0.47,1.29 1.17,0.73 0.29,1.17 1.08,0.66 0.69,1.69 1,0.75 1.55,-1.38 -3.45,-3.58 -0.23,-2.91 -0.68,-1.64 0.74,-0.47 1.85,1.4 0.67,1.09 1.35,0.93 0.47,0.75 2.16,1.37 -0.19,3.51 0.35,0.56 2.72,0.85 -0.6,1.63 0.04,1.24 1.15,1.88 0.71,0.31 0.22,0.5 0.07,1.14 -0.35,0.66 1.98,5.16 -0.58,0.94 0.1,1.35 -0.52,0.72 0.11,0.99 0.45,0.58 0.08,1.92 0.63,0.67 0.04,1.05 1.8,1.47 0.22,-0.17 0.8,3.11 1.84,2.4 2.56,0.31 -0.22,1.61 1.17,3.14 0.85,0.85 0.3,1.05 -0.3,0.17 0.38,1.53 0.62,0.81 -0.04,1 0.68,0.54 0.44,1.26 0.86,0.48 0.51,0.9 0.47,-0.13 0.76,0.62 0.25,1.3 1.61,2.21 0.67,2.08 -0.17,1.19 -0.74,1.77 -0.87,0.93 -0.22,3.09 0.22,1.04 1.05,1.39 0.13,2.88 1.06,1.24 0.69,1.57 1.54,1.35 4.34,0.95 1.21,-0.12 0.06,0.28 -1.28,0.5 -0.79,-0.65 -0.42,0.25 0.21,1.46 1.68,-0.13 -0.01,-0.78 1.21,-1.03 0.06,-0.98 -0.91,-2.2 0.28,-1.07 0.71,-0.45 1.56,0.21 0,0.78 1.06,0.62 0.42,1.12 2.15,0.99 2.06,1.58 0.71,3.23 1.2,0.3 2.6,-0.88 0.04,0.58 0.53,0.49 -0.7,0.86 0.07,2.03 3.24,3.16 -0.28,1.97 0.31,1.69 0.39,0.47 5.38,2.63 -0.31,0.81 1.43,2.07 -0.22,0.69 0.42,0.43 -0.51,4.39 -0.59,1.26 -1.87,2.31 -1.04,0.72 -2.2,0.54 -1.21,0.82 -0.02,0.75 -2.07,1.14 -0.53,1.04 -0.94,0.74 -0.93,0.04 -0.64,0.67 -1.15,0 -2.42,-2.01 -1.17,-2.77 -1.46,-7.1 -2.5,-4.57 -1.83,-2.44 -6.19,-3.28 -11.64,-11.53 -10.8,-6.54 0.12,-0.26 -1.16,-1.24 -1.55,-0.21 0.06,-0.48 -0.64,-0.07 -1.02,-2.97 0.28,-0.11 -0.47,-0.58 -0.99,-0.3 -0.1,1.14 -2.41,-0.2 -0.06,0.75 -0.6,-0.01 0.15,-1.48 -0.73,-2.01 -2.19,-2.41 0.27,-0.25 -0.56,-0.5 -0.68,0.27 0.13,0.44 -1.46,-0.24 -2.01,-0.97 -0.31,-0.69 0.54,-0.03 0.11,-0.76 -0.62,-0.4 -0.17,-0.78 0.65,-0.97 -0.27,-0.16 0.39,-0.72 -0.44,-0.13 0.24,-0.45 -0.42,-0.48 -0.57,0.92 0.29,0.76 -0.39,0.49 0.05,2.53 -0.73,0 -0.48,-1.15 0.77,-1.55 -0.65,-1.39 0.81,-0.45 0.74,-1.67 0.02,-0.96 -0.86,0.12 0.16,-1.89 0.87,-2.01 0.27,-1.77 0.71,-0.12 0.06,-2.45 -0.5,-0.11 0.06,-1.17 0.58,-0.44 -0.39,-0.33 -0.21,-1.07 0.3,-1 0.3,-0.05 0.13,-2.41 -0.13,-1.28 -0.8,-1.07 -0.34,-2.88 -2.03,-5.36 -0.94,-1.24 -1.93,-1.06 -0.87,-2.85 -1.64,-1.94 -1.58,-0.4 -0.19,0.66 -0.45,0.13 -3.19,-2.33 -0.69,-0.26 -0.67,0.28 -0.79,-1.19 -1.98,-1.4 0.01,-0.44 -0.63,-0.03 -3.59,-2.96 0.97,0.09 1.27,0.94 0.13,-0.24 -1.06,-0.77 -1.08,-0.32 -0.69,0.22 -2.27,-1.98 0.19,-0.19 -0.4,-0.5 0.38,-0.61 -1.73,-2.07 -0.94,-1.98 -0.36,1.05 -1.51,-0.7 0.31,-0.32 0.51,0.16 1.55,-1.56 0.42,-1.29 -0.82,-2.81 -0.6,0.65 -0.38,3.22 -0.56,0.49 -0.7,-0.23 -0.38,0.75 0.06,1.83 -0.45,0.05 -2.14,-1.33 -1.51,-0.26 0.21,-0.53 0.54,0.39 0.07,-0.38 -0.53,-0.2 -1.44,0.22 -0.8,0.89 -0.39,1.19 -0.63,0.28 -0.01,0.58 -0.71,0.4 -0.82,-0.26 -0.8,-0.52 -0.7,-1.41 -1.6,-0.4 -1.61,-3.69 -1.81,-1.34 -2.21,-0.57 -0.45,0.16 -0.18,0.55 -0.44,0.03 -1.28,-1.34 -1.1,-1.99 -1.08,-0.8 -1.22,-0.58 -2.02,-0.3 -0.75,0.66 -2.429998,-1.55 -0.51,0.41 -0.48,-0.26 0.06,-0.8 -0.62,-0.39 -0.53,0.11 -0.24,-0.37 -0.02,-3.52 -0.48,-1.57 -2.35,-1.91 -3.33,-1.21 -1.15,-2.25 -1.67,-1.25 -0.07,-1.02 -0.68,-0.46 -0.62,0.95 -0.77,-0.35 -0.31,-0.91 -1.03,-0.53 -0.56,0.27 -1.08,-2.81 -0.79,-0.78 0.8,-0.41 1.06,0.91 2.33,-0.22 1.52,0.23 0.36,0.5 1.37,-0.18 1.62,0.3 0.46,0.49 1.58,0.33 2.77,-0.23 0.59,0.35 2.44,-1.32 0.6,0.35 0.759998,-0.15 0.15,-0.6 -0.63,-0.04 1.1,-1.2 0.86,0.29 -0.52,2.48 0.76,1.26 1.5,1.2 1.27,0.37 1.35,1.2 -0.05,0.42 0.8,0.26 1.02,-1.07 0.06,-0.88 2.1,0.72 1.56,2.96 0.89,0.14 0.59,-1.17 -1.57,-1.62 0.12,-1.05 0.67,0.65 0.15,-0.41 -0.57,-0.45 0.27,-0.61 -0.46,-1.74 0.23,-0.9 -1.75,-1.44 -1.03,1.89 0.19,1.14 -3.18,1.21 -1.64,-1.24 0.24,-0.54 0.6,0.5 -0.74,-1.98 1.17,-1.74 -0.54,-0.48 0.21,-1.43 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 671.96786,386.93244 0.5,0.79 -0.68,0.61 -0.54,0.22 -1.06,-0.57 -0.38,0.33 0.39,0.33 -1.66,1.34 -0.54,-0.67 -0.29,0.58 -2.12,0.86 -1.09,0.1 -0.54,-0.57 0.27,-0.32 2.42,-0.39 5.32,-2.64 z m 28.7,-53.46 -0.16,7.3 4.12,0.51 0.97,2.01 0.45,0.18 1.11,-0.35 0.94,0.99 0.48,-0.09 0.4,-1.01 0.79,-0.73 0.42,0.28 1.03,1.76 -0.11,0.91 0.57,1.04 1.83,1.17 1.98,4.46 3.86,2.1 1.17,2.49 3.17,3.58 0.79,3.44 0.44,0.46 0,0 1.34,1.81 5.3,4.25 3.41,4.67 -0.18,5.85 -1.17,0.66 -0.41,0.67 0.22,2.52 -0.8,5.13 0.17,1.27 0.99,1.24 0.15,0.71 -0.51,1.37 0.82,0.46 -0.57,1.67 0.47,1.38 0.28,4.7 -0.57,1.26 -2.44,2.83 0.25,2.46 0,0 -0.02,3.33 -45.94,-0.01 0,0 0.02,-1.64 -3.98,-1.58 -0.68,0.42 -0.77,-0.9 -1.56,-0.66 -1.64,-1.55 -3.65,-0.8 -2.79,0.13 -0.3,1.3 0.34,1.82 -0.3,0.72 -1.68,0.11 -1.29,0.64 -2.21,-1.12 -1.5,0.15 -1.31,-0.66 -0.87,-1.43 -3.47,-2.33 -1.22,-1.83 -1.08,-2.59 -0.45,-0.32 0.18,-1.97 -1.11,-1.42 -0.36,-0.16 -0.08,0.42 -0.53,0.13 -0.69,-1.06 -0.99,-0.05 -1.44,-1 -0.63,-0.91 -1.14,-3.72 0,0 3.13,-0.56 9.83,-0.61 0.88,1.41 1.49,0.8 -0.6,1.18 -0.27,-0.39 -0.31,0.34 -0.96,-1.28 -0.73,0.85 -0.68,-0.42 -0.24,0.18 0.17,0.72 -0.45,0.57 0.59,0.74 1.15,-0.25 -0.45,-1.12 0.79,0.04 0.28,0.46 0.57,-0.14 1.1,0.72 0.16,0.56 6.79,1.67 1.43,-0.13 0.16,-0.7 0.73,-0.7 4.45,-1.53 0.82,-2.92 0.63,-0.32 0.35,-1.32 -0.23,-0.7 -1.1,-1 -0.92,0.72 -1.15,-0.61 -0.29,-0.98 0.61,-0.47 -0.07,-0.79 0.97,-1.04 -0.77,0.19 -0.7,1.33 -0.76,0.72 -0.52,-0.05 -0.82,0.76 -0.12,0.56 -0.63,0.03 0,-0.24 2.5,-2.57 6.81,-3.66 4.79,-3.45 4.86,-4.53 0.47,-0.93 -0.08,-1.02 0.52,-2 -0.21,-2.17 0.67,-1.8 -0.51,-0.56 -0.04,-0.64 0.93,-1.14 0.19,-1.03 3.85,-2.86 1.41,-2.48 -0.98,-2.71 0.3,-1.37 -0.41,-1.28 0.38,-0.29 -0.39,-4.48 0.3,-0.78 -0.45,-3.4 1.34,-3.56 0.44,-3.02 1.14,-1.42 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 607.45786,458.00244 0.18,-0.64 0,0 -0.06,-0.41 0.4,0.01 0.76,1.15 -1.28,-0.11 z m -0.37,-4.01 -0.01,-0.78 0,0 -0.12,-2.12 0.52,-1.45 -1.25,-2.93 0.08,-0.85 2.19,-6.28 2.94,-2.62 0.8,-3.49 0.76,-1.02 -0.02,-2 0.34,-0.94 0,0 0.94,-1.13 1.95,-0.86 3.72,-2.89 0,0 2.53,-3.17 0.06,-1.61 1.39,-1.87 1.2,-0.79 0.59,-1.16 0.75,-7.08 1.66,-0.28 0.54,-0.61 2.14,0.85 1.39,1.69 0.77,0.35 2.79,-0.09 -0.35,1.69 -1.42,2.12 -0.14,0.58 0.38,0.93 2.07,2.18 -0.3,1.87 0.36,0.33 1.25,-0.06 0.44,-0.35 0.54,0.2 1.21,1.94 0.04,0.66 0.66,0.87 0.81,0.31 1.91,-0.84 2.42,-2.25 5.83,-4.27 0.57,-0.83 3.29,-1.19 0.39,-0.78 -0.41,-1.75 0.12,-0.37 0.43,0.08 -0.04,-0.44 1.77,0.48 1.95,-0.03 0.71,-1.84 1.45,0.37 -0.12,0.59 0.56,0.3 0.59,-0.44 1.19,0.18 1.21,-0.28 1.06,1.36 0.05,2.01 2.56,1.26 1.27,3.3 -0.75,2.66 4.34,1.2 0.19,0.83 1.31,0.37 1.1,1.79 -0.76,0.28 -0.53,1.03 0,0 -0.65,0.06 0.57,0.98 0.76,-0.04 0.98,1.12 0.83,-0.35 0.93,0.31 -0.02,0.83 0.53,0.74 0.63,0.26 0.33,0.96 1.12,1.16 1.05,0.23 0.3,1.03 1.38,1.37 0.11,0.64 1.34,0.4 0.53,0.62 0.27,-0.29 1.1,0.44 0.24,0.85 1.03,0 0.88,0.72 1.13,-0.08 0.04,0.55 2.14,1.25 1.38,2.18 0.35,3.22 0.82,-0.1 0.11,0.55 -0.67,0.23 0.23,0.4 0.76,-0.34 0.36,0.51 0.88,-0.31 0.57,0.63 0.57,-0.28 0.53,0.66 -0.15,0.49 1.71,0 0.38,0.59 0.12,0.58 -0.36,0.35 0.34,0.53 -0.33,0.88 -0.54,0.04 -0.18,0.64 0.36,0.35 -0.77,1.62 0.8,1.06 -0.67,0.44 0.56,0.29 -0.02,0.41 -0.64,-0.05 0.27,1.36 -32.14,-0.27 -12.25,21.07 3.87,5 -1,1.6 -0.85,-0.09 -0.35,0.72 0.13,2.49 -1.05,1.38 0.92,4.29 -0.73,1.17 -0.38,1.54 -0.86,0.71 -4.46,-4.06 -10.99,-11.58 -0.1,-0.85 -0.8,-0.19 -11.16,-10.52 -5.44,-4.29 -6.08,-4.22 -3.82,-1.84 0.28,-0.4 0.75,-0.06 0.29,0.61 0.63,-0.27 0.14,-0.48 -1.12,-1.84 -4.66,-1.01 -0.73,-0.91 -0.22,-1.31 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 375.24786,107.48244 -2.26,4.16 0.02,0.35 1.71,0.61 0.01,1.04 -0.66,0.98 -0.84,-0.32 -0.7,0.34 -1.73,4.01 -1.41,1.11 -1.64,0.61 -2.27,3.78 -0.56,1.1 0.87,1.42 -0.94,1.38 -2.66,6.81 -0.6,0.38 -1.77,-0.71 -0.01,1.55 1.12,0.18 0.49,1.46 -0.34,0.48 -1.9,0.38 0.76,1.44 -0.06,0.83 -0.57,0.82 0.72,0.78 0.14,0.72 -1.09,1.16 0.81,4.52 1.13,0.5 0.24,0.83 0.09,1.06 -0.48,1.14 0.68,3.68 0.22,4.82 0.54,0.68 1.83,0.79 -0.41,1.54 -1.15,0.04 -1.07,1 -1.92,0.91 0.44,0.8 -0.1,1.31 2.15,1.9 1.08,1.83 0,0 -1.1,0.24 -1.15,-0.86 -0.51,0.68 -0.28,-0.17 0.44,-0.72 -0.79,-0.12 -3.21,1.05 -1.51,-0.57 -0.88,0.81 -1.43,-0.28 -0.68,-1 -1.43,-0.24 -1.38,-0.89 -0.73,0.32 -0.31,0.74 0.48,0.66 1.54,0.12 -0.07,1 -2.5,0.39 -1.15,1.52 -1.51,0.54 -1.89,3.08 0.24,1.34 -0.25,0.77 -0.44,0.24 -1.71,-0.2 -1.74,0.91 -0.98,-0.21 -1.72,-1.19 -1.95,-1.89 -2.54,0.24 -1.22,-0.33 -0.74,-0.68 -0.54,-0.04 -0.01,1.08 -1.6,0.7 -0.52,0.58 -0.57,0.09 -0.41,-0.54 -1.68,0.96 -0.23,-0.6 -1.56,-0.47 -1.27,0.25 -1.1,-1.89 -1.64,0.29 -0.76,-1.09 -0.98,0 -1.58,-1.36 -1.94,-0.23 -0.28,-0.58 -1.26,-0.71 -0.96,-1.94 -1.06,-0.23 -1.91,-1.23 -1.27,-0.06 -0.67,-0.89 -0.77,0.54 -0.21,1.29 -1.76,0.57 0.05,1.84 -0.63,0.47 -0.9,3.39 0.03,1.6 -0.9,1.53 0.15,0.46 1.12,0.5 -0.03,1.07 -0.33,0.58 -1.98,0.87 -0.86,0.87 0,1.36 -1,-0.16 -0.41,0.36 0.36,2.14 -0.92,0.26 -1.72,3.99 0.97,1.56 0.61,1.9 -2.12,3.42 -3.53,2.72 -1.23,1.61 -0.64,-0.28 -0.67,-1.21 -2.01,-0.33 -0.52,-0.86 -1.6,0.22 -1.08,-0.66 -0.31,-1.32 -2.31,0.78 -0.32,0.65 0,0 -2.14,-2.79 -0.59,-3.23 -2.89,-4.89 -2.36,-0.69 -3.19,-0.31 -3.81,-1.13 -1.22,-4.68 -3.11,-5.02 -0.07,-1.88 -1.42,-0.92 -0.32,-1.09 0.49,-2 -0.49,-0.82 0.4,-2.27 -1.06,-2.33 -1.22,0.25 -0.61,-0.24 -0.12,-2.9 -0.68,-0.38 -4.89,0.22 0,0 -1.76,-0.39 -2.02,0.62 -3.54,-1.84 0.02,-0.46 0.73,-0.42 -0.48,-3.44 1.25,-3.14 -0.04,-1.72 -1.63,-4.07 -0.97,-1.43 -0.63,-2.09 -2.81,-1.7 -0.52,-0.65 0.7,-2.45 -0.38,-1.66 -2.09,-2.98 -1.82,-0.74 -0.39,-0.69 0.59,-2.76 -1.56,-1.07 -0.19,-0.61 1.04,-1.39 2.53,-0.49 1.45,-0.85 0.77,0.14 1.77,1.31 0.5,-0.03 1.41,-1.05 1.14,-0.12 0.97,-1.22 0.93,-0.09 0.6,-1.19 -2.25,-0.86 -1.55,-1.81 0.42,-2.9 -0.83,-1.95 0.19,-1.04 1.48,-2.62 -0.8,-2.65 0.84,-1.28 -0.46,-2.55 1.49,-1.26 0.1,-2.69 1.38,-0.67 0.29,-0.51 -0.26,-5.670002 0.16,-0.9 0.8,-0.95 0.01,-2.6 -0.66,-6.22 -0.75,-0.96 -0.57,-0.02 -0.34,-1 0.59,-4.93 1.27,-2.57 0,-1.11 -1.45,-1.33 -0.16,-0.99 0.85,-0.52 0.28,-1.82 -1.94,-6.15 0.06,-1.19 -1.1,-1.46 -0.11,-0.81 0.67,-1.61 -1.04,-0.93 -0.09,-2.42 -2.73,-2.65 0.04,-0.61 1.57,-0.08 -0.02,-1.81 0.49,-1.27 -0.24,-1.6 -1.64,-2.84 -0.52,-1.92 0.94,-1.28 -1.05,-1.04 0,0 14.1,-0.04 0,-13.16 42.05,0 1,1.07 1.59,-0.13 1.01,0.56 0.87,1.03 1.75,4.03 0.76,0.41 1.13,2.37 3.2,1.96 1.81,0.18 1.25,0.8 0.59,1.48 0.57,-0.01 0.37,0.66 0.52,0 2.18,2.66 0.25,0.84 1.28,0.45 0.41,0.57 1.5,0.59 1.16,1 1.21,2.71 1.2,0.58 0.36,0.76 1.87,1.18 0.55,0.9 -0.17,0.47 0.98,0.16 1.46,1.01 0.28,-0.37 0.91,0.87 0.89,-0.25 0.21,0.62 0.4,-0.23 0.56,0.66 0.42,0.01 -0.11,0.44 1.2,0.19 0.8,1.35 0.85,0.53 0.91,-0.14 0.57,0.73 0.25,1.3 1.15,0.43 0.85,1.02 0.76,2.12 0.02,1.46 0.46,0.75 -0.19,0.85 1.11,0.73 -0.22,0.33 1.52,1.59 -0.08,0.53 1.36,1.1 0.46,1.59 -0.16,1.5 0.28,1 -0.49,2.07 0.36,0.21 -0.04,1.08 0.43,0.73 -0.31,0.41 0.27,1.07 1.08,0.93 1.14,1.91 1.31,3.91 3.45,2.74 0.4,0.83 1.13,0.62 0.53,-0.33 1.97,1 0.12,0.44 0.57,0.18 -0.12,0.63 1.22,1.72 1.44,0.56 1.39,1.31 1.97,0.9 3.01,0.420002 1.38,0.64 0.4,-0.16 0.22,1.28 0.4,-0.29 1,1.39 1.47,0.31 0.26,0.39 2.34,-0.02 2.11,2.09 -0.11,0.48 0.6,-0.07 0.49,0.75 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 463.90786,143.13244 -0.26,0.61 -1.09,0.79 -0.95,0.06 -1.92,1.3 -5.52,-0.92 -3.67,0.26 -1.13,0.63 -0.55,2.34 -1.69,2.6 -0.29,0.79 0.16,2.29 -0.63,0.49 -2.23,-0.12 -2.1,0.92 -1.19,-0.38 -1.19,1.04 -1.83,2.98 0.25,3.34 2.82,2.07 0.59,-0.05 0.7,-3.12 0.63,0.07 2.05,1.48 0.42,5.13 -0.84,2.24 -1.05,0.77 -1.14,2.19 -3.2,-0.04 -2.61,1.7 -3.51,0.28 -0.87,0.9 -1.04,2.73 -2.42,2.42 0.02,1.3 4.54,4.78 2.7,2.02 1.05,3.11 1.42,1.15 0.86,0.08 0.38,0.64 -0.99,2.9 0.24,2.47 0.84,1.78 1.11,0.14 0.84,0.66 2.13,0.08 0.35,0.36 0.56,3.41 0.82,0.85 3.28,1.88 -0.51,1.05 3.6,0.63 0.5,0.8 0.88,0.32 0.39,0.95 -0.75,0.89 -0.15,1.15 -0.34,0.2 -1.94,-0.03 -3.41,-0.88 -1.31,-1.53 -1.74,-0.17 -0.94,0.31 0.29,0.81 -1.79,0.57 -1.7,3.22 0.89,2.93 0.09,2.16 -0.2,0.39 -2.41,0.06 -0.16,0.37 0.29,0.83 -0.32,1.2 1.38,1.55 0.11,1.39 0.65,1.23 -1,3.26 0,0 -2.12,-0.47 -0.75,0.32 -0.18,0.78 -1.44,0.37 -2.09,-0.81 -1.37,-1.3 -1.92,-3.76 -1.25,-0.82 -2.96,-0.37 -2.27,0.51 -0.92,0.88 -2.83,-0.02 -0.62,-3.56 -1.16,-0.32 -1.47,0.41 -2.16,-3.07 -1.96,-1.66 -2.5,-0.97 -2.54,-1.71 -9.4,-0.61 -5.4,1.07 -0.63,0.53 -0.02,1.63 0,0 -3.05,2.03 -0.58,1.01 -0.51,2.14 0.5,1.72 -0.28,0.52 -0.69,0.21 -2.1,-1.35 -2.78,-0.16 -3.42,-1.59 -1.3,-1.2 -0.62,-0.86 -0.54,-3.12 -2.43,-1.93 -0.6,-1.74 -1.77,-2.12 -0.63,-3.15 1.36,-1.36 2.26,-0.45 -0.8,-1.23 -1.34,-0.26 -0.67,-0.82 0.09,-0.86 1.4,-2.15 1.06,-0.81 1.2,-3.11 -1.2,-4.47 -0.18,-1.99 0.41,-2.28 -1.68,-3.95 -0.17,-1.39 0.44,-2.93 -1.38,-3.97 -2.3,-2.13 -0.82,-1.21 -1.22,-1.18 -2.98,-0.79 -0.72,-0.63 0,0 -1.08,-1.83 -2.15,-1.9 0.1,-1.31 -0.44,-0.8 1.92,-0.91 1.07,-1 1.15,-0.04 0.41,-1.54 -1.83,-0.79 -0.54,-0.68 -0.22,-4.82 -0.68,-3.68 0.48,-1.14 -0.09,-1.06 -0.24,-0.83 -1.13,-0.5 -0.81,-4.52 1.09,-1.16 -0.14,-0.72 -0.72,-0.78 0.57,-0.82 0.06,-0.83 -0.76,-1.44 1.9,-0.38 0.34,-0.48 -0.49,-1.46 -1.12,-0.18 0.01,-1.55 1.77,0.71 0.6,-0.38 2.66,-6.81 0.94,-1.38 -0.87,-1.42 0.56,-1.1 2.27,-3.78 1.64,-0.61 1.41,-1.11 1.73,-4.01 0.7,-0.34 0.84,0.32 0.66,-0.98 -0.01,-1.04 -1.71,-0.61 -0.02,-0.35 2.26,-4.16 0,0 0.69,0.07 0.27,-0.63 0.42,0.08 -0.26,0.57 1.36,0.71 0.1,0.51 0.44,-0.45 0.34,0.4 1.61,-0.11 0.85,0.38 0.89,-0.36 0.51,-2.25 0.27,0.2 0.29,-1.06 0.82,-0.11 1.09,-1.72 0.02,-0.59 0.62,-0.25 0.37,0.29 0.99,-0.47 0.17,-0.71 0.63,0.22 0.46,-0.35 -0.2,-0.65 -0.8,-0.45 0.43,-0.810002 0.17,-1.76 1.03,-0.22 -0.08,-0.33 0.71,-0.91 -0.38,-0.25 0.05,-0.9 0.7,-1.25 -0.13,-1.05 0.74,-0.6 0.32,-1.55 0.54,0.13 0.07,-1.24 1.18,-1.1 -0.12,-0.42 0.69,-1.56 1.11,0.23 1.38,-0.59 0.63,0.32 0.86,-0.59 -0.08,-0.5 2.68,0.52 0.7,-0.64 0.41,-1.62 1.08,-0.99 1.4,0.32 0.01,0.39 2.13,0.35 1.61,1.42 1.4,0.17 0.5,-0.14 0.02,-0.33 1.03,-0.13 1.58,0.23 0.27,0.4 0.45,-0.39 2.05,-0.32 0.47,0.29 -0.06,0.54 0.78,-0.25 1.68,0.75 0.43,-0.19 0.37,0.32 0.41,-0.29 0.28,0.4 1.91,-0.56 0.08,-0.56 0.61,-0.5 0.19,1.49 1.98,-0.84 0.2,1.05 1.06,-0.53 0.23,0.21 -0.41,0.31 0.38,1.02 0.55,0.4 0.33,1.42 1.2,-0.21 0.38,0.59 -0.28,1.53 0.61,0.44 0.23,-1.33 0.31,-0.35 0.46,0.14 0.15,1.62 -0.49,1.07 0.3,0.34 1.91,0.18 0.56,1.05 2.21,0.49 1.3,2.52 1.64,0.75 1.43,1.03 0.3,0.800002 1.97,1.01 0.76,1.68 -0.24,0.42 2.38,1.79 0.4,0.88 0.35,3.74 0.46,1.22 0.74,0.07 0.66,2.01 0.68,0.11 0.34,0.61 0.1,1.32 0.61,0.6 0.19,2.13 1.31,0.64 0.02,0.81 1.25,0.77 -0.37,1.12 0.64,0.85 1.24,0.37 -0.12,0.41 -0.65,0.17 0.69,0.94 -0.23,1.37 1.5,2.4 -0.04,1.08 0.97,1.12 0.76,0.09 0.3,1.1 3.14,1.37 0.88,1.8 0.81,0.46 0.19,1.02 0.82,1.19 0.91,0.12 -0.02,1.09 1,1.01 -0.18,1.02 0.71,1.06 0,1.06 0.67,0.11 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 372.56786,382.21244 -2.47,2.24 -1.02,-0.31 -0.38,0.28 0.03,1.79 -1.86,1.18 -0.68,1.7 0,0 -5.51,-4.36 -5.18,-2.77 -4.02,-1.36 0.14,-0.84 0.46,-0.05 0.15,-0.62 -0.45,-0.52 -1.1,-0.6 -1.84,0.94 -0.25,-0.63 -1.75,-0.74 -4.53,-1.21 0.33,-0.44 0.62,0.41 0.18,-0.26 -0.59,-0.22 0,0 1.92,0.05 1.48,-1.79 1.14,0.48 0.56,-0.11 0.48,-0.84 0.87,-0.58 0.55,0.4 3.77,-0.88 1.27,0.38 1.13,-0.29 3.1,-2.32 3.25,0.32 1.41,-0.21 3.22,-1.68 2.51,-2.41 0.61,0.13 0.48,2.89 -0.16,1.02 0.97,0.83 0.21,0.78 1.07,0.48 -0.5,1.8 0.07,3.12 -0.56,1.32 0.82,1.54 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 280.78786,200.80244 0.32,-0.65 2.31,-0.78 0.31,1.32 1.08,0.66 1.6,-0.22 0.52,0.86 2.01,0.33 0.67,1.21 0.64,0.28 1.23,-1.61 3.53,-2.72 2.12,-3.42 -0.61,-1.9 -0.97,-1.56 1.72,-3.99 0.92,-0.26 -0.36,-2.14 0.41,-0.36 1,0.16 0,-1.36 0.86,-0.87 1.98,-0.87 0.33,-0.58 0.03,-1.07 -1.12,-0.5 -0.15,-0.46 0.9,-1.53 -0.03,-1.6 0.9,-3.39 0.63,-0.47 -0.05,-1.84 1.76,-0.57 0.21,-1.29 0.77,-0.54 0.67,0.89 1.27,0.06 1.91,1.23 1.06,0.23 0.96,1.94 1.26,0.71 0.28,0.58 1.94,0.23 1.58,1.36 0.98,0 0.76,1.09 1.64,-0.29 1.1,1.89 1.27,-0.25 1.56,0.47 0.23,0.6 1.68,-0.96 0.41,0.54 0.57,-0.09 0.52,-0.58 1.6,-0.7 0.01,-1.08 0.54,0.04 0.74,0.68 1.22,0.33 2.54,-0.24 1.95,1.89 1.72,1.19 0.98,0.21 1.74,-0.91 1.71,0.2 0.44,-0.24 0.25,-0.77 -0.24,-1.34 1.89,-3.08 1.51,-0.54 1.15,-1.52 2.5,-0.39 0.07,-1 -1.54,-0.12 -0.48,-0.66 0.31,-0.74 0.73,-0.32 1.38,0.89 1.43,0.24 0.68,1 1.43,0.28 0.88,-0.81 1.51,0.57 3.21,-1.05 0.79,0.12 -0.44,0.72 0.28,0.17 0.51,-0.68 1.15,0.86 1.1,-0.24 0,0 0.72,0.63 2.98,0.79 1.22,1.18 0.82,1.21 2.3,2.13 1.38,3.97 -0.44,2.93 0.17,1.39 1.68,3.95 -0.41,2.28 0.18,1.99 1.2,4.47 -1.2,3.11 -1.06,0.81 -1.4,2.15 -0.09,0.86 0.67,0.82 1.34,0.26 0.8,1.23 -2.26,0.45 -1.36,1.36 0.63,3.15 1.77,2.12 0.6,1.74 2.43,1.93 0.54,3.12 0.62,0.86 1.3,1.2 3.42,1.59 2.78,0.16 2.1,1.35 0.69,-0.21 0.28,-0.52 -0.5,-1.72 0.51,-2.14 0.58,-1.01 3.05,-2.03 0,0 0.35,0.52 0.04,1.65 0.75,0.34 0.36,1.1 1.53,0.71 0.8,0.94 -0.81,4.9 1.21,0.45 1.02,4 -0.97,0.52 -0.02,0.41 0.5,0.37 -0.12,0.68 -6.07,0.58 -1.68,-0.23 -0.76,0.91 -2.66,-0.87 -1,-0.7 -1.12,-0.1 -2.25,0.8 -2.23,-0.7 -3.9,-0.27 -1.71,1.37 -0.47,1.34 -2.4,1.82 -2.07,2.83 -2.26,2.14 -2.4,0.72 -0.23,1.32 0.78,0.51 0.37,1.65 -0.31,1.68 0.37,1.89 -0.45,1.2 0.89,4.27 -2.8,2.42 -2.32,2.89 -0.09,1.88 -1.29,5.77 -0.61,0.37 -1.37,2.73 -0.08,1.28 0.85,3.09 -0.16,5.55 -0.25,0.63 -3.21,1.42 -1.01,1.51 -1.16,3.05 0,0 -2.94,1.3 -0.4,1.38 -0.48,0.03 -1.82,-1.11 -0.95,-2.07 -2.49,-2.39 -1.71,-0.43 -1.39,-1.76 -1.35,2.56 -0.81,0.85 -0.69,-0.03 -2.2,-4.58 1.69,-1.76 1.7,-0.87 0.6,-0.89 -0.12,-1.24 -1.15,0.03 -0.52,-0.37 -0.58,-2.46 -2.09,-0.16 -1.33,-0.6 -1.53,-1.75 -0.54,-0.03 -0.91,1.31 -1.68,0.35 -2.2,-2.64 0,0 -2.12,-2.18 -0.6,-0.06 -0.85,0.6 -2.04,-0.15 -0.61,-1.28 -0.13,-2.26 -1.22,-1.34 -0.74,-1.74 0.27,-0.93 -1.05,-2.92 -0.44,-2.81 -1.72,-1.65 -0.9,-1.98 -1.08,-1.21 -0.63,-2.95 -0.71,-1.06 -0.79,-2.59 0.26,-0.9 -1.03,-0.93 -0.09,-2.2 -1.74,-2.27 -0.14,-1.07 -1.08,-0.26 -0.89,-1.38 -1.45,-0.96 -4.04,-1.17 -0.67,1.04 -2.79,2.12 -1.33,0.19 -0.69,0.55 -0.7,-0.49 -0.84,0.18 -0.59,-1.96 -0.98,-1.41 -0.81,-4.12 -0.2,-0.25 -0.57,0.42 -0.57,-0.2 -1.21,-4.47 -1.32,-0.31 -0.89,-2.61 -2.3,-0.22 -0.53,0.44 -1.2,-0.96 0.33,-1.44 -1.2,-2.38 -0.75,-0.65 -0.48,-1.82 -1.01,-0.61 0.51,-1.96 0.09,-5.12 1.33,-3.21 -0.08,-0.68 -0.47,0.08 -0.6,-0.72 1.73,-2.22 1.19,-0.77 -0.15,-0.73 -0.73,0.16 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 465.44786,314.42244 0.5,0.49 -0.11,2.06 -1.15,1.91 2.48,0.61 -0.04,1.17 -0.71,1.44 -1.45,0.67 -0.56,1.03 -1.1,0.17 -1.73,-1.75 -1.52,0.56 -2.25,3.34 0.1,1.45 -0.67,1.6 -0.82,-0.48 -0.22,1.1 -0.66,0.4 -2.72,-0.38 -1.5,0.71 -4.58,0.28 -0.72,1.41 -0.65,3.8 0.14,0.76 0.96,0.71 0.65,1.74 -0.01,2.71 1.09,1.86 2.02,1.41 0.72,1.67 0,0 -0.43,1.09 0.6,1.18 0.1,1.32 -0.51,1.75 0.67,0.05 -0.08,0.99 -1.18,1.15 -2.06,0.28 -0.73,0.79 -0.48,1.4 -0.62,0.18 0.33,-1.5 -0.5,-0.24 -1.94,0.48 -1.38,1.02 -3.44,-0.17 -2.58,-0.91 -1.3,-0.14 -0.61,0.29 -0.26,-0.1 0.21,-0.47 -0.46,-2.34 -2.21,0.6 -1.39,-0.44 -0.66,0.58 0.33,0.82 -1.22,0.52 -1.8,-0.74 -2.54,-0.24 -0.47,-0.5 -0.02,-3.24 -0.45,-1.73 1.04,0.52 0.63,-0.27 -1.34,-1.8 -1.09,-0.75 -1.43,0.24 -0.63,-0.39 -2.1,0.69 -2.01,2.8 -0.91,-0.3 -2.21,0.14 -0.48,-0.43 -1.18,0.7 -0.81,-0.09 -0.44,-0.45 -0.68,-2.85 0.36,-0.4 -0.57,-0.49 -0.55,0.07 -0.33,-0.54 -0.86,-0.05 0,0 0.38,-2.77 1.79,-3.43 -1.57,-2.87 -1.65,-0.43 -0.55,-1.31 2.01,-1.96 0.12,-0.83 1.81,-1.5 1.91,-3.95 2.49,-1.91 1.12,-2.71 -0.11,-0.65 0.52,-0.74 1.47,-0.09 0.43,-0.37 0.67,-1.37 -0.81,-0.47 0.58,-2.19 -0.7,-0.12 1.52,-5.53 -0.12,-0.7 1.2,-1.36 -0.74,-0.83 1.22,-1.29 0,0 0.97,0.63 0.81,-0.94 0,0 1.16,0.67 2.91,0.31 1.26,0.73 4.63,1.06 1.23,0.75 1.07,-0.04 4.97,3.72 2.74,1.43 2.75,-0.03 1.52,-0.61 -0.15,-1.12 0.62,-1.83 1.08,-0.73 3.89,1.28 3.15,2 0.27,0.69 0.48,-0.09 1.7,2.13 1.81,-0.17 0.39,-0.54 0.68,0.84 1.61,0.04 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 449.47786,379.54244 0.3,2.94 -1.05,1.92 -0.74,4.23 0.37,1.6 1.75,0.76 0.1,1.19 -0.25,0.72 -1.66,1.81 0.65,0.66 1.33,-0.27 1.51,0.33 0.22,1.08 1.57,1.96 0.04,-0.43 0.62,0.03 0.34,-0.39 0.19,0.37 1.98,-2.18 2.47,-0.58 -0.69,-1.38 0.35,-0.6 1.02,-0.49 0.79,0.43 3.51,-0.23 0.29,-0.58 0.88,-0.42 0.85,0.29 0.44,-1.56 1.76,-0.32 -0.36,-1.72 0.81,-0.05 0.91,1.08 1.98,0.67 0.82,-0.49 0.81,0.13 0,0 0.51,0.84 -0.65,1.12 0.44,0.35 1.08,-0.23 1.12,0.46 2.02,2.67 5.51,0.7 2.3,2.33 0,0 -0.05,1.23 1.35,1.18 1.34,0.62 1.22,2.25 2.99,-0.2 0.22,0.8 -0.83,0.97 4.21,1.78 0.12,1.07 1.4,-0.3 0.47,0.27 0.86,-0.86 1.55,-0.14 1.61,1.98 1.61,0.8 0,0 -1.74,3.95 -0.17,1.41 2.73,6.06 0.6,4.58 -0.92,0.83 -0.18,2.06 0.56,0.52 2.3,0.78 0.45,1.17 -0.11,1.91 0.27,0.59 1.16,0.25 0.42,0.54 0.36,1.56 -0.92,2.88 -0.91,0.92 -1.22,0.23 -0.93,0.67 -0.18,1.35 -4.11,3.59 -0.46,2.02 -4.64,3.54 0,0 -3.56,-3.61 -1.93,-2.51 -1.69,0.16 -0.33,0.56 -1.28,-0.19 -10.62,-3.2 -3.11,-0.65 -4,-0.04 -1.63,-0.53 -2.08,-1.09 -1.81,-1.48 -0.99,-0.26 0.62,-0.64 -0.23,-0.44 -0.98,0.04 0.19,0.43 -0.57,0.25 -1.11,-1.73 -0.88,-0.44 -26.59,-9.48 0.13,-0.58 -0.51,-0.64 -2.49,-1.75 -0.76,-0.98 -6.24,-2.63 0.23,-0.84 -0.91,-1.08 -0.81,-0.57 -2.18,-0.28 -0.1,-0.54 -1.05,-0.38 -0.76,-1.89 -1.86,-1.33 -1.37,-2.35 -3.81,-2.12 -2.2,-0.68 -1.37,0.18 -0.74,0.82 -0.53,-0.32 0,0 -0.82,-1.26 0.11,-3.93 0.76,-0.63 2.64,-0.82 0.86,0.25 1.46,-0.64 0.76,-0.77 1.62,0.37 0.82,-0.28 0.18,-0.32 -1.84,0.03 0.33,-0.9 -0.11,-1.23 -0.65,-1.41 0.58,-1.1 -0.63,-1.23 0.13,-0.34 0.64,-0.03 -0.47,-0.79 0.68,-0.39 0.62,0.14 -0.21,-0.46 0.56,-0.11 0.53,0.82 0.48,-0.77 -0.33,-0.41 1.06,-0.33 0.06,1.05 0.6,-0.38 0.29,0.38 0.15,-0.67 0.67,-0.24 1.13,0.03 1.21,1.9 2,0.91 3.46,-0.51 0.21,-0.46 2.03,-0.46 1.72,0.04 0.47,0.49 2.03,0.47 1.57,-0.19 1.13,0.28 1.18,1.66 0.08,0.82 0.64,0.13 1.42,-1.1 0.62,0.57 1.44,0.23 0.4,0.79 1.49,0.85 0.34,-0.42 0.4,0.3 0.27,1.06 0.81,-0.03 0.77,-1.01 -2.83,-3.79 -0.3,-3.14 -1.22,-4.24 0.47,-1.03 1.1,-0.85 0.42,0.04 0.57,1.57 2.44,-2.92 0.93,-0.53 1.09,-2.45 2.22,-1.41 z m 4.64,18.75 0.07,0.32 0.38,-0.34 -0.45,0.02 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 496.62786,317.19244 0.84,0.17 0.3,0.75 -0.3,2.66 1.83,1.71 1.26,0.66 1.31,0.07 0.86,-0.9 2.03,0.62 2.53,3.42 -1.86,2.46 -0.63,2.21 0.56,1.06 -0.26,0.63 -1.45,0.23 -1.34,-1.39 -0.46,0 -2.39,2.16 -0.32,0.86 -0.65,0.54 -0.33,3.66 -0.58,1.3 -0.25,2.08 1.17,2.59 0.88,1.08 0.5,-0.22 1.33,-1.55 2.48,-1.16 1.88,-2.23 1.6,-0.73 2.14,-2.33 0.83,-0.35 1.46,0.95 0,0 0.07,3 -2.86,2.52 -0.91,1.38 -3.62,1.85 0.7,1.41 2.12,-0.48 0.46,2.19 -0.81,4.8 -1.54,3.08 0.7,4.73 0,0 -2.38,-0.5 -0.82,1.47 -1.45,1.21 -2.09,0.28 -1,-0.23 -5.01,1.71 0,0 -0.2,-1.41 1.84,-4.15 -0.17,-1.74 -5.81,0.61 -1.72,2.58 -0.24,0.21 -0.65,-0.32 0.02,-0.9 -0.87,-1.77 0.2,-0.52 0.91,-0.53 0.85,-0.08 1.11,-4.28 -0.47,-1.34 -0.6,-0.07 -2.73,1.39 -3.88,1.07 -0.53,3.75 -0.69,0.76 -2.13,-1.01 -0.17,2.24 -1.21,0.99 0.1,-2.49 -0.4,-1.34 -0.69,-0.65 -0.34,-1.25 -1.22,-1.26 0.7,-0.99 -1.51,-3.13 -0.64,-0.25 -0.13,-0.58 -4.65,-0.69 -2.63,-1.49 -1.18,-1.39 0,0 1.01,-6.54 1.58,-0.49 0.91,-0.68 2.93,-0.72 2.32,-1.61 -0.63,-2.02 1.15,-2.56 1.16,-0.42 0.81,-1.2 0.47,-2.21 0.83,-1.56 -0.27,-1.11 1.65,-1.43 1.21,0.71 4.11,-1.29 1.28,-3.13 0,0 2.26,-0.75 1.14,2.4 1.34,1.1 1.08,-0.04 1.35,-2.38 0.92,1.31 1.33,-2.96 1.58,-1.84 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 390.52786,309.79244 2.05,-1.12 4.21,0.38 1.74,1.41 2.17,1.02 1.26,-0.06 3.02,-1.04 0.72,-0.5 2.55,-3.55 4.28,-1.97 -1.96,-2.14 0.24,-1.6 -0.26,-0.59 0,0 3.54,0.91 2.13,1.14 2.67,2.35 2.09,0.75 0.28,0.39 0,0 -1.22,1.29 0.74,0.83 -1.2,1.36 0.12,0.7 -1.52,5.53 0.7,0.12 -0.58,2.19 0.81,0.47 -0.67,1.37 -0.43,0.37 -1.47,0.09 -0.52,0.74 0.11,0.65 -1.12,2.71 -2.49,1.91 -1.91,3.95 -1.81,1.5 -0.12,0.83 -2.01,1.96 0.55,1.31 1.65,0.43 1.57,2.87 -1.79,3.43 -0.38,2.77 0,0 -2.8,0.01 -2.14,1.04 -1.71,-0.17 -1.33,0.46 -1.68,-0.13 -1.07,0.34 -2.06,1.64 -1.06,-0.08 -1.01,1.05 -0.94,0.33 -0.28,1.43 -2.97,0.73 -0.23,0.81 -0.44,0.04 -1.05,-1.3 -2.47,-0.45 -0.3,1.15 -0.93,-0.2 -0.36,0.27 -0.02,2.35 -0.89,1.51 0.5,0.84 0.5,0.05 0.45,-0.56 2.27,0.28 3.21,0.94 0.66,0.64 0.61,2.21 -0.33,0.81 -0.93,0.74 1.91,4.2 -0.63,2.59 3.36,-0.07 0.61,0.68 0.06,1.56 -2.36,2.5 -0.85,2.31 -2.31,-0.58 -1.37,0.72 -4.02,3.58 -2.2,1.21 -1.59,1.74 -0.29,0.09 -1.26,-1.76 -0.53,-0.1 -2.22,1.7 -1.55,-0.3 -1.66,0.41 0,0 -0.05,-1.96 -0.82,-1.54 0.56,-1.32 -0.07,-3.12 0.5,-1.8 -1.07,-0.48 -0.21,-0.78 -0.97,-0.83 0.16,-1.02 -0.48,-2.89 -0.61,-0.13 -2.51,2.41 -3.22,1.68 -1.41,0.21 -3.25,-0.32 -3.1,2.32 -1.13,0.29 -1.27,-0.38 -3.77,0.88 -0.55,-0.4 -0.87,0.58 -0.48,0.84 -0.56,0.11 -1.14,-0.48 -1.48,1.79 -1.92,-0.05 0,0 -0.56,-0.53 -0.63,0.09 -0.08,-0.51 -0.66,0.26 -0.49,-0.3 -0.85,0.13 0.01,-0.64 0.51,-0.55 -0.13,-0.46 -0.89,-0.29 -0.23,0.43 -0.93,0.19 -2,-1.07 -1.89,-1.72 0.36,-0.72 -0.37,-0.73 -0.84,-0.47 0.09,-0.85 -0.45,-0.22 -0.22,-1.49 -0.76,-0.74 -0.84,-0.03 0.04,-0.36 -2.83,-2.11 -0.26,-0.73 -1.43,-1.51 -0.4,-1.11 -3.92,-5.33 -1.12,-2.32 0.21,-2.21 -0.34,-1.22 -0.68,-0.24 -0.13,-0.6 -2.24,-2.34 -0.46,-1.65 1.05,-0.51 0.95,-1.13 7.41,-1.16 1.5,-1.1 0.66,-1.61 -0.31,-0.97 -1.28,-1.06 0,0 4.45,-5.62 1.17,-0.45 2.33,0.47 3.19,-2.44 1.25,-0.21 1.5,0.73 1.21,1.43 3.08,0.78 2.66,3.01 1.08,0.56 2.3,2.12 0.67,0.78 0.5,1.55 0.51,0.32 0.03,-1.46 -1.18,-1.46 0.29,-0.35 -0.73,-0.75 -0.37,-1.53 0.45,-0.64 0.82,-0.18 1.5,-8.51 4.04,-0.23 0.95,-0.4 0.97,-0.97 1.71,-0.28 2.25,-1.28 0.4,-0.82 0.4,-4.22 -0.24,-1.48 -1.39,-1.24 -1.74,-4.29 -4.5,-0.6 -0.85,-1.61 -0.11,-2.72 -0.53,-0.48 -1.11,-0.09 -1.2,-1.16 -1.65,0.52 -0.46,-3.02 1.24,-4.89 -0.18,-0.48 0,0 1.08,-1.21 1.35,0.34 0.36,-3.03 3.1,-1.17 0.53,0.37 -1.05,3.24 0.27,0.49 1.8,-1.14 1.03,-1.18 -0.16,-1.43 -1.74,-3.84 0.11,-0.79 2.16,-1.53 2.66,-0.38 1.81,1.01 -0.17,0.91 -1.1,0.82 -1.45,1.87 -1.69,4.22 -0.04,3.32 1.21,1.78 1.16,0.17 0.38,-1.16 0,-7.04 0.63,-0.57 3.43,-0.67 1.42,0.51 1.4,1.32 0.6,1.93 -0.04,1.16 -3.78,6.17 -0.09,0.45 0.58,0.66 1.93,0.02 0.69,-0.8 1.27,0.2 0.71,0.52 0.9,-0.44 0.93,-1.73 2.39,-1.89 -1.24,-1.03 0.31,-1.87 1.88,-0.73 2.17,0.17 0.41,0.86 -0.76,1.51 0.5,0.44 2.15,0.14 0.51,0.38 -0.7,3.47 -1.19,2.91 -0.74,0.69 -1.26,0.2 -3.28,1.68 -1.77,1.73 -2.92,2.07 0.18,1.79 -0.33,2.47 -1.62,1.88 -1.79,0.46 0.85,2.48 0.93,0.54 1.02,-0.49 0.67,0.14 0.34,0.58 -0.1,1.02 -1.17,1.12 -4.04,1.81 0.17,0.5 2.5,0.62 0.75,0.81 0.75,1.7 0.94,0.49 2.26,-0.19 2.9,1.61 0.99,-0.48 0.88,0.07 0.22,-0.56 1.34,-0.26 1.71,0.43 0.11,-0.37 1.47,-0.52 0.33,-2.02 0.63,-0.54 1.37,-0.49 1.52,0.5 3.58,-2.91 2.29,-1.4 0.96,-1.31 0.48,-2.69 -2.78,-1.78 -0.65,-1.85 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 488.38786,379.24244 -0.95,-0.02 -2.35,0.75 -0.91,-0.8 -0.63,0.12 -1.3,1.09 -1.33,-1.17 -1.33,0.24 0,0 -2.63,-4.38 -0.09,-0.98 3.17,-2.75 0.55,-1.98 2.24,-2.46 0.33,0.36 -0.05,1.06 1.57,1.92 0.48,1.55 2.14,1.79 0.32,1.48 0.47,-0.38 0.23,0.49 0.35,1.58 -0.47,1.67 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 454.56786,398.27244 -0.38,0.34 -0.07,-0.32 0.45,-0.02 z m 8.86,-51.68 1.17,1.4 2.64,1.49 4.64,0.69 0.13,0.58 0.64,0.26 1.51,3.12 -0.7,1 1.22,1.25 0.34,1.25 0.69,0.65 0.4,1.34 -0.1,2.49 1.21,-1 0.17,-2.24 2.13,1.01 0.69,-0.77 0.53,-3.75 3.88,-1.08 2.73,-1.38 0.59,0.06 0.47,1.34 -1.11,4.28 -0.85,0.08 -0.91,0.52 -0.21,0.52 0.87,1.78 -0.01,0.89 0.64,0.32 0.24,-0.2 1.72,-2.58 5.82,-0.61 0.17,1.74 -1.84,4.15 0.19,1.42 0,0 0.97,1.82 0.76,-0.24 0.52,0.6 0,0 0.39,1.82 -0.56,0.61 -0.04,1.09 1.04,3.63 0.12,4.4 0,0 -0.89,0.18 -2.61,2.06 -2.55,-0.94 -0.93,-1.59 -0.98,-0.83 0,0 -0.19,-0.83 0.47,-1.67 -0.35,-1.58 -0.23,-0.5 -0.47,0.38 -0.31,-1.48 -2.14,-1.8 -0.48,-1.54 -1.57,-1.92 0.05,-1.06 -0.33,-0.36 -2.24,2.46 -0.56,1.98 -3.17,2.75 0.1,0.98 2.62,4.38 0,0 -3.95,6.3 -0.45,1.43 -1.56,1.84 -0.24,1 0,0 -0.81,-0.13 -0.82,0.49 -1.98,-0.67 -0.91,-1.08 -0.81,0.05 0.36,1.72 -1.76,0.32 -0.44,1.56 -0.85,-0.29 -0.88,0.42 -0.29,0.58 -3.51,0.23 -0.79,-0.43 -1.02,0.49 -0.35,0.6 0.69,1.38 -2.47,0.58 -1.98,2.18 -0.19,-0.37 -0.34,0.39 -0.62,-0.03 -0.04,0.43 -1.57,-1.96 -0.22,-1.08 -1.51,-0.33 -1.33,0.27 -0.65,-0.66 1.66,-1.81 0.25,-0.72 -0.1,-1.19 -1.75,-0.76 -0.37,-1.6 0.74,-4.23 1.05,-1.92 -0.3,-2.94 0,0 0.56,-0.38 0.23,-1.13 1.5,-1.83 1.1,-2.39 -0.28,-0.98 0.76,-1.78 0.43,-0.6 0.67,-0.12 0.3,-0.62 -0.44,-5.18 -0.57,-0.47 -0.96,-1.95 1.51,0.1 1.44,-0.5 0.29,-0.51 0.28,-2.06 1.33,-1.7 -0.04,-0.61 -0.87,-0.82 0.08,-2.43 0,0 2.55,-0.31 1.92,-2.01 -0.29,-1.73 -0.54,-0.96 0.24,-0.31 0.88,0.6 0.65,-0.13 -0.21,-0.72 0.3,-0.63 1.15,-0.72 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 408.26786,344.95244 0.86,0.05 0.33,0.54 0.55,-0.07 0.57,0.49 -0.36,0.4 0.68,2.85 0.44,0.45 0.81,0.09 1.18,-0.7 0.48,0.43 2.21,-0.14 0.91,0.3 2.01,-2.8 2.1,-0.69 0.63,0.39 1.43,-0.24 1.09,0.75 1.34,1.8 -0.63,0.27 -1.04,-0.52 0.45,1.73 0.02,3.24 0.47,0.5 2.54,0.24 1.8,0.74 1.22,-0.52 -0.33,-0.82 0.66,-0.58 1.39,0.44 2.21,-0.6 0.46,2.34 -0.21,0.47 0.26,0.1 0.61,-0.29 1.3,0.14 2.58,0.91 3.44,0.17 1.38,-1.02 1.94,-0.48 0.5,0.24 -0.33,1.5 0.62,-0.18 0.48,-1.4 0.73,-0.79 2.06,-0.28 1.18,-1.15 0.08,-0.99 -0.67,-0.05 0.51,-1.75 -0.1,-1.32 -0.6,-1.18 0.43,-1.09 0,0 1.55,0.99 1.22,1.92 -0.18,0.75 3.29,3.04 0,0 -0.08,2.43 0.87,0.81 0.03,0.62 -1.33,1.7 -0.28,2.05 -0.29,0.52 -1.43,0.49 -1.52,-0.1 0.96,1.96 0.57,0.47 0.43,5.18 -0.3,0.62 -0.66,0.11 -0.44,0.6 -0.76,1.79 0.28,0.98 -1.1,2.39 -1.5,1.83 -0.23,1.13 -0.56,0.39 0,0 -2.25,1.38 -1.09,2.46 -0.93,0.53 -2.44,2.92 -0.57,-1.57 -0.42,-0.04 -1.1,0.85 -0.47,1.03 1.22,4.23 0.3,3.15 2.83,3.79 -0.77,1.01 -0.81,0.02 -0.27,-1.06 -0.4,-0.3 -0.34,0.41 -1.48,-0.84 -0.4,-0.79 -1.44,-0.23 -0.62,-0.57 -1.41,1.1 -0.65,-0.12 -0.08,-0.83 -1.18,-1.66 -1.13,-0.27 -1.57,0.19 -2.03,-0.47 -0.47,-0.5 -1.72,-0.04 -2.03,0.46 -0.21,0.46 -3.46,0.5 -1.99,-0.91 -1.21,-1.9 -1.13,-0.03 -0.66,0.25 -0.15,0.67 -0.29,-0.38 -0.6,0.38 -0.06,-1.06 -1.06,0.34 0.32,0.4 -0.48,0.77 -0.53,-0.82 -0.56,0.11 0.21,0.46 -0.62,-0.14 -0.68,0.39 0.47,0.79 -0.64,0.03 -0.13,0.34 0.63,1.23 -0.58,1.1 0.65,1.4 0.11,1.23 -0.33,0.9 1.84,-0.02 -0.18,0.31 -0.82,0.28 -1.62,-0.37 -0.76,0.78 -1.47,0.64 -0.86,-0.25 -2.63,0.82 -0.76,0.63 -0.11,3.93 0.82,1.27 0,0 0.19,0.76 -1.28,0.53 -2.96,-1.46 -4.05,-1.21 -7.91,-1.73 -5.13,-2.39 -3.78,-0.7 -4.95,-1.86 -0.52,0.23 -3.81,-2.32 -1.77,-4.11 -2.87,-2.23 0.36,-0.84 -1.56,-1.89 0,0 0.68,-1.7 1.86,-1.18 -0.03,-1.79 0.38,-0.28 1.02,0.31 2.47,-2.24 0,0 1.66,-0.41 1.55,0.3 2.22,-1.7 0.53,0.1 1.26,1.76 0.29,-0.09 1.59,-1.74 2.2,-1.21 4.02,-3.58 1.37,-0.72 2.31,0.58 0.85,-2.31 2.36,-2.5 -0.06,-1.56 -0.61,-0.68 -3.36,0.07 0.63,-2.59 -1.91,-4.2 0.93,-0.74 0.33,-0.81 -0.61,-2.21 -0.66,-0.64 -3.21,-0.94 -2.27,-0.28 -0.45,0.56 -0.5,-0.05 -0.5,-0.84 0.89,-1.51 0.02,-2.35 0.36,-0.27 0.93,0.2 0.3,-1.15 2.47,0.45 1.05,1.3 0.44,-0.04 0.23,-0.81 2.97,-0.73 0.28,-1.43 0.94,-0.33 1.01,-1.05 1.06,0.08 2.06,-1.64 1.07,-0.34 1.68,0.13 1.33,-0.46 1.71,0.17 2.14,-1.04 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 479.58786,379.45244 1.33,-0.24 1.33,1.17 1.3,-1.09 0.63,-0.12 0.91,0.8 2.35,-0.75 0.95,0.02 0,0 0.98,0.83 0.93,1.59 2.55,0.94 2.62,-2.06 0.89,-0.18 0,0 -2.76,7.08 1.27,7.84 -0.55,0.72 -2.76,-2.64 -0.51,0.12 -0.8,1.26 -1.16,0.64 -0.61,0.99 -2.77,1.9 0,0 -2.3,-2.34 -5.51,-0.69 -2.02,-2.68 -1.13,-0.45 -1.07,0.23 -0.44,-0.36 0.65,-1.12 -0.5,-0.83 0,0 0.24,-1.01 1.56,-1.84 0.44,-1.43 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 304.00786,319.19244 0.16,0.81 -0.79,0.37 -0.46,-0.71 0.42,-0.46 0.67,-0.01 z m -5.18,-4.35 1.56,0.44 0.4,0.56 -0.51,0.38 -0.15,0.76 -2.29,-0.87 -0.4,-0.53 1.39,-0.74 z m -5.42,-5.3 2.62,0.7 0.4,0.44 -0.06,0.59 0.77,0.78 -0.21,0.87 -0.6,0.37 -2.37,-1.27 -0.54,-1.38 -0.01,-1.1 z m -0.44,-2.1 0.36,1 -0.51,0.23 -0.24,-0.83 0.39,-0.4 z m 24.72,-21.4 0.58,1.44 -0.17,1.35 0.55,0.48 -0.21,0.67 0.94,6.35 -0.6,0.03 -0.18,-0.4 -0.75,-4.16 -1.96,-4.49 0.28,-0.25 1.1,1.77 0.76,-0.25 -0.74,-2.17 0.4,-0.37 z m 7.2,-12.79 2.2,2.64 1.68,-0.35 0.91,-1.31 0.54,0.03 1.52,1.75 1.33,0.6 2.09,0.16 0.58,2.47 0.52,0.37 1.15,-0.03 0.12,1.24 -0.59,0.89 -1.7,0.87 -1.69,1.76 2.2,4.58 0.69,0.03 0.81,-0.85 1.35,-2.56 1.39,1.76 1.7,0.43 2.49,2.39 0.96,2.07 1.81,1.12 0.48,-0.04 0.4,-1.38 2.94,-1.3 0,0 0.21,2.77 0.42,0.96 0.73,0.43 0,0 0.18,0.48 -1.25,4.89 0.46,3.02 1.66,-0.52 1.2,1.15 1.11,0.09 0.53,0.48 0.11,2.72 0.85,1.62 4.5,0.6 1.74,4.29 1.39,1.24 0.24,1.47 -0.4,4.22 -0.4,0.83 -2.25,1.28 -1.72,0.28 -0.97,0.97 -0.96,0.4 -4.04,0.23 -1.5,8.51 -0.82,0.18 -0.45,0.64 0.38,1.53 0.73,0.75 -0.29,0.35 1.18,1.46 -0.04,1.46 -0.51,-0.32 -0.5,-1.55 -0.68,-0.78 -2.3,-2.12 -1.08,-0.55 -2.66,-3.01 -3.08,-0.79 -1.21,-1.43 -1.5,-0.73 -1.25,0.22 -3.19,2.43 -2.33,-0.46 -1.17,0.45 -4.45,5.62 0,0 -1.22,-1.75 -0.47,-0.08 -0.88,0.73 -3,-0.99 0.77,-0.63 0.92,-2.15 0.36,0.09 0.87,-1.57 1.21,-0.8 0.88,-1.17 0.15,-0.84 1.02,0.35 1.14,-1.62 -0.28,-0.98 0.5,-3.15 -0.65,-2.83 1.39,-2.69 -0.21,-1.25 -0.74,-0.84 -0.93,0.31 -4.66,-3.17 -1.43,-3.57 -2.97,-5.06 -0.73,-2.66 0.18,-3.21 0.8,-0.38 0.46,1.19 0.6,0.1 0.31,0.8 1.98,0.97 0.3,-1.52 -1.02,-0.71 -0.25,0.25 -0.35,-0.75 -1.02,0.34 -0.19,-0.57 0.38,-0.35 -0.07,-0.61 -0.45,-0.06 -0.33,0.42 -0.33,-0.3 0.13,-0.7 -0.52,-0.97 -0.21,-3.39 -0.3,-0.57 0.19,-0.85 -0.58,-0.39 0.25,-0.68 -0.63,-2.11 0.33,-0.17 0,0 2.1,1.24 3.46,0.57 0.36,-0.89 -0.23,-2.04 -0.4,-0.36 -0.21,-1.33 -1.31,-1.3 -0.45,-1.3 0.33,-1.02 1.69,-2.1 0.56,-3.41 0.9,-0.62 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 466.82786,145.86244 -0.65,0.34 -1.28,1.73 -2.78,0.8 -0.62,0.69 0.27,0.79 -0.35,1.07 0.6,0.45 4,0.19 0.05,0.88 -1.17,1.42 1.27,0.87 -0.22,2.46 0.24,1.38 1.15,1.13 0.42,3.19 -1.64,1.39 -0.81,2.39 0.13,1.12 1.47,-0.05 1.25,0.66 0.52,0.78 -0.47,1.29 -0.23,3.22 0.8,0.82 0.88,-0.37 0.67,0.4 0.84,1.9 1.88,0.22 1.24,4.14 1.82,2.49 1.41,-0.13 -0.06,1 1.17,1.62 0.69,0.09 0.75,-0.73 0.63,0.05 0.18,0.6 -0.36,0.73 0.76,1.34 -0.89,0.33 0.82,0.46 0.37,0.65 3.28,0.46 0.65,0.59 1.19,2.34 0.95,0.54 2.66,-1.53 1.07,0.15 3.38,-0.69 0.69,0.45 0.14,1.47 0.79,1.01 -0.3,3.35 0.59,1.52 -0.47,0.77 -0.2,2.07 0.69,1.57 -0.41,0.8 0.99,0.83 1.99,0.63 0.4,0.26 0.03,0.52 -1.54,1.58 -0.59,1.37 -1.25,0.62 -1.36,1.44 -0.78,0.08 -0.99,1.13 -4.38,0.85 -0.99,1.14 -0.75,2.03 -2.8,-0.22 -0.61,-1.17 -0.51,-0.04 -1.46,1.97 -1.26,0.41 -0.25,0.4 0.6,2.24 0.67,0.36 -0.38,1.67 -0.9,0.09 -0.92,0.69 -0.47,1.6 -1.12,0.45 -0.38,-1.52 -0.38,0.13 -0.36,1.04 -1.15,0.47 -1.12,1.6 -1.76,-0.1 -1.3,2.13 -2.87,1.27 -1.99,1.35 -0.69,2.1 0.22,0.28 1.83,-0.09 1.26,2.62 -0.86,6.77 1.77,2.09 1.4,3.64 1.37,0.77 0.76,2.34 -2.25,-0.44 -0.36,0.1 -0.34,1.51 -1.76,0.97 -0.71,0.15 -2.55,-0.68 -2.31,1.23 -0.66,2.81 -1.48,1.77 -0.33,0.96 0.39,2.84 -0.21,1.77 -3.09,-0.38 -0.8,0.68 0.55,1.35 -0.43,0.77 0,0 -3.9,-0.74 -2.34,2.8 -1.5,-0.72 -1.24,-1.47 -0.56,-1.65 -0.25,-4.09 -0.51,-1.27 1.15,-5.6 -0.11,-0.89 -0.97,-1.46 0.21,-4.37 -0.88,-2.25 -2.48,-3.13 0.13,-1.43 -1.79,-1.71 -0.29,-0.81 1.2,-1.57 0.05,-0.33 -0.69,-0.26 0.48,-1.57 -1.39,-0.5 -1.05,0.19 -1.72,-2.32 0,0 0.55,-0.42 0,0 1,-3.26 -0.65,-1.23 -0.11,-1.39 -1.38,-1.55 0.32,-1.2 -0.29,-0.83 0.16,-0.37 2.41,-0.06 0.2,-0.39 -0.09,-2.16 -0.89,-2.93 1.7,-3.22 1.79,-0.57 -0.29,-0.81 0.94,-0.31 1.74,0.17 1.31,1.53 3.41,0.88 1.94,0.03 0.34,-0.2 0.15,-1.15 0.75,-0.89 -0.39,-0.95 -0.88,-0.32 -0.5,-0.8 -3.6,-0.63 0.51,-1.05 -3.28,-1.88 -0.82,-0.85 -0.56,-3.41 -0.35,-0.36 -2.13,-0.08 -0.84,-0.66 -1.11,-0.14 -0.84,-1.78 -0.24,-2.47 0.99,-2.9 -0.38,-0.64 -0.86,-0.08 -1.42,-1.15 -1.05,-3.11 -2.7,-2.02 -4.54,-4.78 -0.02,-1.3 2.42,-2.42 1.04,-2.73 0.87,-0.9 3.51,-0.28 2.61,-1.7 3.2,0.04 1.14,-2.19 1.05,-0.77 0.84,-2.24 -0.42,-5.13 -2.05,-1.48 -0.63,-0.07 -0.7,3.12 -0.59,0.05 -2.82,-2.07 -0.25,-3.34 1.83,-2.98 1.19,-1.04 1.19,0.38 2.1,-0.92 2.23,0.12 0.63,-0.49 -0.16,-2.29 0.29,-0.79 1.69,-2.6 0.55,-2.34 1.13,-0.63 3.67,-0.26 5.52,0.92 1.92,-1.3 0.95,-0.06 1.09,-0.79 0.26,-0.61 0,0 0.75,-0.17 0.24,0.93 0.77,0.25 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 543.86786,396.11244 1.17,-2.18 0.3,-0.96 -0.49,-0.74 0.05,-0.86 0.65,-0.61 1.15,1.16 1,0.35 -0.58,1.27 0.61,2.74 0.64,0.9 1.96,1.55 1.3,-0.38 1.39,0.81 1.02,1.89 1.38,0.09 -0.54,0.9 0.7,0.35 2.47,-0.78 1.43,0.52 1.15,-0.19 2.03,0.48 0.52,0.44 1,3.79 -0.22,1.25 -0.81,1.12 -0.99,2.57 -0.72,0.68 0.34,0.72 -0.17,1.18 2.17,4.42 1.96,0.58 1.26,-0.65 2.87,-0.17 3.01,-2.1 3.66,-0.92 1.21,-1.09 0.42,0.07 1.37,0.84 -0.18,0.68 -1.49,0.66 -0.23,1.13 3.36,4.41 3.45,2.79 -0.01,0.99 0.64,0.57 -0.33,1.37 28.57,1.75 0,0 -0.34,0.94 0.03,2 -0.76,1.02 -0.8,3.49 -2.94,2.62 -2.19,6.29 -0.08,0.85 1.24,2.93 -0.52,1.46 0.12,2.11 0,0 0.04,0.44 -1.98,0.89 -0.49,-0.09 -0.52,-0.43 -0.72,0.07 -0.79,-0.87 -0.87,0.02 -0.89,-1.51 -1.12,0.39 0.02,0.99 -0.66,0.05 -0.02,0.63 1.12,0.96 4.37,0.32 3.07,2.29 0,0 -0.18,0.64 0,0 -4.71,-2.07 -2.96,-0.91 -7.69,-1.12 -0.24,-0.45 2.64,-0.9 0.73,-0.65 0.4,-1.13 -2.38,-0.84 -1.29,0.9 -0.39,0.77 -0.96,0.05 -0.27,0.61 -0.51,-0.15 -0.1,-0.39 1.1,-0.94 -1.1,-0.93 0.24,-0.61 -1.39,-1.05 -1.67,0.44 -1.3,2.23 -1.25,-0.03 -0.92,0.82 0.21,0.86 -0.61,0.06 -0.44,0.8 6.42,-0.01 1.84,0.24 0.12,0.29 -3.64,0.06 -3.99,0.67 -1.85,-0.16 -0.16,0.61 -2.02,0.17 -0.48,0.46 -0.63,0 -0.16,1 -2.02,0.89 -0.34,0.52 0.21,0.78 -1.37,0.46 -0.18,0.54 -1.55,-0.18 -0.11,0.58 -1.97,0 -0.11,0.47 -2.03,0.89 -2.44,0.34 -1.28,0.85 -3.85,1.01 -2.73,1.26 0.01,0.26 -1.46,0.4 0.18,0.33 -2.95,1.43 -4.45,-0.27 -1.87,0.97 -1.57,-0.03 -3.54,-1.49 -4.01,-0.6 -1.55,-0.95 -2.43,-0.76 -0.77,-0.54 -0.27,-0.77 -3.76,-1.7 -3.26,-0.61 -2.02,0.13 -2.64,-0.73 -0.74,0.18 -2.57,-0.4 -0.44,0.39 -2.43,-0.37 -5.68,-3.74 -5.44,-2.9 -4.67,-0.84 -3.82,-1.38 0,0 4.64,-3.55 0.46,-2.01 4.11,-3.59 0.19,-1.35 0.93,-0.67 1.22,-0.23 0.9,-0.91 0.92,-2.88 -0.36,-1.55 -0.42,-0.54 -1.16,-0.26 -0.27,-0.59 0.11,-1.91 -0.45,-1.17 -2.29,-0.78 -0.56,-0.51 0.18,-2.07 0.92,-0.83 -0.61,-4.58 -2.73,-6.06 0.17,-1.42 1.74,-3.95 0,0 1.2,-1.4 2.07,-1.35 1.57,-0.36 3.46,-0.01 1.45,-0.59 2.19,1.61 1.18,0.36 0.72,-0.21 1.77,-1.64 -0.07,-0.43 -2.35,-1.64 -0.44,-0.76 2.03,-4.33 1.56,-0.68 1.59,-0.2 0.48,0.34 0.23,0.97 -0.1,0.46 -1.33,0.9 0.1,0.4 1.31,0.96 0.74,1.08 1.44,2.82 0.36,1.64 0.82,0.7 0.87,-0.85 0.91,-1.9 2.6,-2.58 1.36,-0.29 3.72,0.89 1.78,-1.48 0.11,-0.89 0.29,0.56 1.36,-0.9 2.39,-0.51 1.92,-3.45 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 511.59786,338.20244 0.7,-2.56 0.96,-0.75 0.09,-0.83 0.88,-0.94 0.27,-1.02 1.18,0.39 2.03,-0.32 -0.01,1.79 -1.23,0.75 0.16,0.3 0.87,-0.19 0.81,0.6 -0.37,0.84 0.16,0.84 0.81,0.84 2.23,1.22 0.48,1.12 -1.5,2.47 -1.61,-0.92 -1.17,0.76 0.06,4.01 0.46,2.37 0.68,0.55 2.04,-0.22 0.86,1.78 0.59,0.2 1.61,-1.4 1.22,-1.95 0.82,-0.66 7.06,2.48 0.08,0.51 -2.16,2.99 -1.65,4.28 -0.2,0.81 0.32,0.98 -0.34,0.97 -0.67,0.87 -0.97,2.63 -0.57,0.24 -0.25,0.7 1.38,2.99 -0.55,1.38 0.34,0.42 1.43,0.99 3.63,0.82 2.93,1.27 0.47,0.59 0.11,1.28 -0.16,0.7 -0.53,0.12 -4.82,-0.22 -0.19,0.9 0.52,6.12 -0.07,0.55 -1.86,2.41 0,2.99 0.36,1.11 0.85,0.73 3.81,1.11 -0.17,0.75 1.86,3.13 1.43,0.1 0.95,-1.05 1.39,-0.8 2.58,0.83 1.85,2.16 0,0 -0.81,0.84 -1.92,3.45 -2.39,0.51 -1.36,0.9 -0.29,-0.56 -0.11,0.89 -1.78,1.48 -3.72,-0.89 -1.36,0.29 -2.6,2.58 -0.91,1.9 -0.87,0.85 -0.82,-0.7 -0.36,-1.64 -1.44,-2.82 -0.74,-1.08 -1.31,-0.96 -0.1,-0.4 1.33,-0.9 0.1,-0.46 -0.23,-0.97 -0.48,-0.34 -1.59,0.2 -1.56,0.68 -2.03,4.33 0.44,0.76 2.35,1.64 0.07,0.43 -1.77,1.64 -0.72,0.21 -1.18,-0.36 -2.19,-1.61 -1.45,0.59 -3.46,0.01 -1.57,0.36 -2.07,1.35 -1.2,1.4 0,0 -1.61,-0.8 -1.6,-1.98 -1.55,0.14 -0.86,0.86 -0.47,-0.27 -1.4,0.31 -0.13,-1.08 -4.2,-1.78 0.83,-0.97 -0.22,-0.8 -2.98,0.2 -1.22,-2.25 -1.35,-0.62 -1.35,-1.18 0.05,-1.22 0,0 2.77,-1.9 0.61,-0.99 1.16,-0.64 0.8,-1.26 0.51,-0.12 2.76,2.64 0.55,-0.72 -1.27,-7.84 2.76,-7.08 0,0 -0.12,-4.4 -1.04,-3.63 0.04,-1.09 0.55,-0.61 -0.38,-1.83 0,0 0.7,-0.29 1.16,0.37 3.03,2.31 1.32,1.38 0.54,1.38 1.18,1.31 4.06,2.24 0.86,-0.14 3.07,-2.68 0.57,-0.04 1.46,0.99 0.77,-0.05 1.24,-0.84 1.4,-2.33 0.84,0.32 2.68,-0.51 0.82,-0.55 0.28,-1.15 -0.94,-0.2 -0.67,-0.6 -0.31,-1.17 -1.21,-1.24 -0.59,-0.38 -1.53,0.5 -0.84,-0.17 0.13,-1.73 -4.1,-3.41 -0.71,-1.06 -0.49,-0.07 -1.55,1.83 -0.61,0.24 -2.06,-0.38 0,0 -0.7,-4.73 1.54,-3.08 0.81,-4.8 -0.46,-2.19 -2.12,0.48 -0.7,-1.41 3.62,-1.85 0.91,-1.38 2.86,-2.52 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 483.94786,320.33244 -1.28,3.13 -4.11,1.29 -1.21,-0.71 -1.65,1.43 0.27,1.11 -0.83,1.56 -0.47,2.21 -0.81,1.2 -1.16,0.42 -1.15,2.56 0.63,2.02 -2.32,1.61 -2.93,0.72 -0.91,0.68 -1.58,0.49 -1.01,6.54 0,0 -1.1,0.79 -0.3,0.63 0.21,0.72 -0.66,0.12 -0.88,-0.6 -0.24,0.31 0.54,0.96 0.29,1.73 -1.92,2.01 -2.55,0.31 0,0 -3.29,-3.04 0.18,-0.75 -1.22,-1.92 -1.55,-0.99 0,0 -0.72,-1.67 -2.02,-1.41 -1.09,-1.86 0.01,-2.71 -0.65,-1.74 -0.96,-0.71 -0.14,-0.76 0.65,-3.8 0.72,-1.41 4.58,-0.28 1.5,-0.71 2.72,0.38 0.66,-0.4 0.22,-1.1 0.82,0.48 0.67,-1.6 -0.1,-1.45 2.25,-3.34 1.52,-0.56 1.73,1.75 1.1,-0.17 0.56,-1.03 1.45,-0.67 0.71,-1.44 0.04,-1.17 -2.48,-0.61 1.15,-1.91 0.11,-2.06 -0.5,-0.49 0,0 -0.59,-0.57 1.54,-0.38 -0.28,-0.45 0.18,-0.48 1.1,0.04 1.51,1 0.59,1.89 0.63,0.66 2.49,0.25 1.94,-0.5 0.58,0.36 1.06,-2.77 0.56,-0.37 0.8,0.24 0.48,-0.28 0.99,2.2 3.22,3.35 0.82,1.46 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 792.18786,339.01244 -1.08,2.58 -1.14,1.48 -0.35,0.05 -2.56,3.35 -1.57,0.97 -0.67,-1.71 0.12,-1.91 2.29,-3.75 0.7,-0.36 0.72,0.76 0.34,-0.33 0.46,0.28 1.55,-0.4 1.19,-1.01 z m -60.53,69.87 -0.25,-2.46 2.44,-2.83 0.57,-1.26 -0.28,-4.7 -0.47,-1.38 0.57,-1.67 -0.82,-0.46 0.51,-1.37 -0.15,-0.71 -0.99,-1.24 -0.17,-1.27 0.8,-5.13 -0.22,-2.52 0.41,-0.67 1.17,-0.66 0.18,-5.85 -3.41,-4.67 -5.3,-4.25 -1.34,-1.81 0,0 0.93,-2 0.33,-1.46 -0.17,-0.87 0.56,-0.49 3.54,-0.17 1.39,-1.39 2.43,-1.05 2.43,-0.04 1.18,-0.41 1.92,-1.78 1.08,0.92 0.3,-0.32 -0.27,-0.69 1.87,-1.6 1.78,-1.04 5.51,-1.98 0.46,-0.47 0.79,-2.37 0.51,-0.42 1,0.01 0.93,1.68 0.36,-0.05 -0.25,-2.19 1.5,-2.76 1.17,-0.56 1.14,1 1.54,-0.44 1.51,0.1 3.11,-1.83 3.13,-2.7 1.72,-0.82 0.86,-1.17 0.27,-1.58 0.86,-1.08 0.48,-2.46 1.15,-2.05 0.1,-0.97 -1.33,-3.21 0.47,-3.16 0.88,-0.86 0.13,-0.76 -0.33,-5.31 0,0 1.33,0.09 -0.04,0.41 0.57,0.28 0.67,-0.32 2.09,0.59 0.33,0.39 0.65,-0.25 1.63,0.19 0.44,0.4 0.29,-0.53 2.71,-0.87 0.23,-1.96 -0.63,-0.27 0.64,-0.78 0.46,-0.16 0.44,0.5 1.44,0.39 0.56,0.83 0.34,-0.16 0.54,0.45 0.05,0.79 1.58,2.18 0.97,4.05 0.43,-0.1 0.22,-1.61 0.74,-0.67 -0.07,-0.9 -0.65,-1.07 0.65,0.22 0.11,1.72 -0.64,1.63 0.4,1.16 -0.16,1.37 0.19,0.8 1.2,0.85 -0.69,2.49 -0.75,0.05 -0.31,0.71 -1.27,4.05 -1.18,1.14 -1.11,1.59 0.04,0.49 -1.15,0.68 -0.33,0.81 -1.92,2.16 -3.88,3.04 -1.73,2.42 -1.02,2.47 -1.46,1.73 -1.41,3.98 -0.01,1.89 0.64,1.93 0.42,0.14 0.16,1.15 -0.58,1.37 -0.85,0.83 0.41,-0.93 0.44,0.01 0.56,-1.33 -0.06,-0.59 -0.62,-0.38 0.07,1.29 -1.05,1.79 -0.77,0.28 -0.34,-0.38 -0.92,0.55 -1.62,2.72 -2.43,0.42 -0.19,1.9 1,0.69 0.15,0.59 0.7,-0.34 -0.1,0.78 0.36,0.14 -0.25,0.71 0.58,-0.08 0.89,-1.26 1.58,-0.34 0.6,0.65 0.82,-0.78 -0.27,-0.41 1.72,-0.22 0.54,0.8 -0.74,2.5 -1.98,1.91 -0.47,-0.03 0.08,-0.79 -2.46,1.48 -0.62,1.69 0,1.25 -0.67,0.79 0.36,0.08 -0.06,0.74 1.4,-0.05 2.03,-2.79 0.8,-0.38 0.45,0.17 -0.34,1.4 0.35,-1.12 0.97,-0.08 -2.21,2.63 -0.28,3.21 -2.04,4.14 -1.12,4.75 -0.9,0.96 -0.82,4.76 -0.45,0.9 -0.04,2.04 -1.44,2.34 -0.56,3.33 -0.73,-0.54 -0.64,0.06 0.02,-0.68 0.56,-0.38 -0.12,-0.96 -0.41,0.1 0.4,-1.48 -0.52,-0.3 -0.15,-0.62 -0.81,-0.24 0.19,-1.03 -2.62,-0.79 -1.04,-1.23 0.74,-0.46 0.34,-2.04 0.93,-1.7 -0.47,-0.53 0.38,-1.24 -0.41,-1.43 -0.73,-0.62 0.24,-0.91 -0.79,-0.29 -2.26,3.58 -1.09,0.38 0.01,0.25 0.98,-0.43 -3.24,5.92 -2.26,0.13 -0.21,-0.27 -1.06,0.42 -1.2,-0.28 -0.92,0.82 -0.88,3.01 -1.06,1.13 -0.45,2.03 -1.09,1.38 -1.15,2.88 -1.42,0.78 -0.58,1.42 -1.62,1.31 0.11,1.6 -0.93,-1.04 -0.91,-0.39 -0.63,-0.95 -1.05,0.04 -0.96,-1.16 -1.8,0.39 -1.27,1.2 z m 50.74,-96.48 -0.21,0.54 -2,1.2 -1.46,-0.03 -0.56,0.38 -0.91,-0.52 -0.48,-0.76 1.72,0.56 1.4,-0.1 2.5,-1.27 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 438.60786,232.61244 1.72,2.32 1.05,-0.19 1.39,0.5 -0.48,1.57 0.69,0.26 -0.05,0.33 -1.2,1.57 0.29,0.81 1.79,1.71 -0.13,1.43 2.48,3.13 0.88,2.25 -0.21,4.37 0.97,1.46 0.11,0.89 -1.15,5.6 0.51,1.27 0.25,4.09 0.56,1.65 1.24,1.47 1.5,0.72 2.34,-2.8 3.9,0.74 0,0 0.9,1.06 0.14,2.06 1.03,0.78 0.48,1.15 -0.33,3.63 0.22,2.98 0.2,0.69 1.09,0.92 4.2,1.37 3.27,0.26 2.2,0.73 0.65,-0.43 -0.05,-1.03 0.97,-0.56 0.62,0.33 0.81,1.29 1.69,0.56 1.38,1.08 0.83,1.17 0.92,2.53 2.16,2.85 1.78,-0.23 2,0.39 2.32,-0.07 0.71,-0.8 1.89,1.19 2.14,-0.45 0.96,0.17 0,0 0.29,0.93 0.53,0.26 2.36,-0.04 4.43,1.37 0.66,0.73 1.2,3.56 -2.53,0.05 -1.07,0.72 0.32,2.55 -0.26,0.67 -0.41,0.28 -2.17,-0.26 -0.27,0.41 0.38,0.38 1.13,0 -0.58,0.53 0.35,0.26 -0.13,1.23 0.59,0.72 0.45,-0.11 0.03,0.48 1.19,1.11 -1.7,0.79 -0.29,0.82 -1.06,-0.06 0.05,0.7 -1.26,0 -0.2,0.86 0.89,3.31 1.33,0.22 0.14,3.34 0,0 -1.68,-0.02 -1.58,1.84 -1.33,2.96 -0.92,-1.31 -1.35,2.38 -1.08,0.04 -1.34,-1.1 -1.14,-2.4 -2.26,0.75 0,0 -0.88,-0.26 -0.82,-1.46 -3.22,-3.35 -0.99,-2.2 -0.48,0.28 -0.8,-0.24 -0.56,0.37 -1.06,2.77 -0.58,-0.36 -1.94,0.5 -2.49,-0.25 -0.63,-0.66 -0.59,-1.89 -1.51,-1 -1.1,-0.04 -0.18,0.48 0.28,0.45 -1.54,0.38 0.59,0.57 0,0 -2.64,1.33 -1.61,-0.04 -0.68,-0.84 -0.39,0.54 -1.81,0.17 -1.7,-2.13 -0.48,0.09 -0.27,-0.69 -3.15,-2 -3.89,-1.28 -1.08,0.73 -0.62,1.83 0.15,1.12 -1.52,0.61 -2.75,0.03 -2.74,-1.43 -4.97,-3.72 -1.07,0.04 -1.23,-0.75 -4.63,-1.06 -1.26,-0.73 -2.91,-0.31 -1.16,-0.67 0,0 1.93,-3.97 0.35,-0.96 -0.26,-0.18 0.13,-0.55 0.39,0.03 0.36,-1.64 -1.38,-3.86 3.3,-7.3 0.19,-1.65 -1.97,-2.58 -0.71,0.05 -1.46,0.7 -4.45,4.61 -2.43,0.73 -2.08,-0.05 -1.48,-2.02 -0.92,-2 -1.07,-0.58 -2.31,-0.34 -1.11,-1.32 -4.18,-2.53 -0.94,-1 -0.25,-1.51 0.2,-1.26 1.26,-3.99 -1.03,-3.02 0.51,-1.69 -0.62,-0.81 0.87,-1.67 0.66,-0.2 2.32,0.93 2.94,-0.58 0.52,-1.44 0.85,-1.03 2.28,-0.84 3.56,-2.13 3.48,-5.14 4.74,-1.59 1.1,-1.54 1.18,-2.96 -1.01,-1.18 0.83,-3.45 0.64,-0.62 1.87,-0.48 1.36,-0.88 0.92,-1.78 0.21,-1.49 0.67,-0.52 1.58,0.07 0.98,-0.5 0.69,-1.72 1.19,-1 0.36,-1.78 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 317.37786,283.99244 0.42,0.06 0.54,0.94 -0.45,0.73 -0.51,-1.73 z m -61.12,-65.4 1.17,1.35 0.5,-0.19 0.27,0.31 0.01,0.9 0.59,1.13 -0.27,2.7 -0.48,-0.01 -0.69,-2.11 -1.08,-1.17 -0.02,-2.91 z m -4.82,-2.05 1.41,0.93 3.59,4.56 0.73,1.14 0.05,1.38 -0.39,0.16 -2.7,-5.14 -2.82,-2.59 0.13,-0.44 z m -0.55,-2.3 1.78,1.24 0.21,0.57 -1.66,-0.8 -0.33,-1.01 z m -21.58,-30.8 1.03,0.12 0,0 0.46,0.38 -0.13,1.01 -0.38,0.28 1.78,1.47 -0.35,-1.14 0.77,-0.64 -0.17,-0.47 -0.31,0.28 -0.46,-0.25 -0.92,-1.8 -0.02,-0.74 0,0 -0.15,-1.56 0.29,-0.19 0.24,1.87 0.39,0.17 0.5,-0.94 0.79,0.91 0.13,0.78 0.48,-0.08 -0.05,0.81 0.34,0.35 2.93,-1.7 1.28,-1.17 2,-0.58 0.11,-2.49 0.47,-0.87 4.09,-0.98 2.06,-3.86 1.86,-0.55 -0.29,-2.49 3.12,-3.88 0.31,-1.78 0,0 4.88,-0.22 0.68,0.38 0.12,2.9 0.62,0.24 1.22,-0.26 1.05,2.33 -0.4,2.26 0.5,0.82 -0.5,2.01 0.33,1.09 1.41,0.91 0.07,1.88 3.11,5.02 1.22,4.68 3.81,1.13 3.19,0.31 2.36,0.7 2.89,4.88 0.59,3.23 2.14,2.79 0,0 0.06,0.67 0.73,-0.16 0.16,0.73 -1.2,0.77 -1.73,2.21 0.6,0.72 0.47,-0.08 0.07,0.68 -1.33,3.21 -0.08,5.12 -0.51,1.97 1,0.61 0.48,1.82 0.75,0.65 1.2,2.37 -0.33,1.45 1.2,0.95 0.53,-0.44 2.3,0.23 0.9,2.61 1.32,0.3 1.21,4.47 0.57,0.2 0.57,-0.42 0.21,0.25 0.81,4.12 0.98,1.41 0.59,1.95 0.83,-0.17 0.7,0.49 0.69,-0.55 1.33,-0.19 2.79,-2.13 0.67,-1.04 4.04,1.18 1.45,0.96 0.9,1.37 1.08,0.26 0.15,1.07 1.74,2.27 0.08,2.2 1.03,0.94 -0.25,0.9 0.79,2.59 0.71,1.07 0.63,2.94 1.08,1.21 0.91,1.98 1.72,1.65 0.44,2.81 1.05,2.92 -0.27,0.93 0.74,1.74 1.22,1.33 0.13,2.26 0.6,1.28 2.04,0.14 0.85,-0.6 0.6,0.07 2.12,2.18 0,0 -0.83,0.61 -0.56,3.41 -1.69,2.1 -0.33,1.02 0.45,1.3 1.31,1.3 0.21,1.33 0.4,0.36 0.23,2.04 -0.36,0.89 -3.46,-0.57 -2.1,-1.24 0,0 0.23,-1.02 -1.5,-1.63 0.25,-0.59 0.74,-0.35 -0.69,-0.57 -0.54,0.7 0.52,1.9 0.54,0.51 -0.56,1.68 0.52,1.68 -0.37,0.56 -3.72,-5.81 -2.97,-2.87 -1.78,-1.1 -4.22,-5.17 -4.67,-4.58 0.44,-0.33 1.15,1.27 0.08,-0.33 -1.45,-1.15 -0.54,0.21 -0.19,0.56 -0.36,-0.33 0.1,-0.69 -0.7,-0.5 -0.92,-1.65 0.31,-0.41 -1.25,-1.96 -2.55,-2.5 0.08,-0.35 -1.39,-1.18 -0.64,-1.1 -2.56,-1.94 0.41,-0.5 -2.2,-3.4 -0.23,-1.22 -7.52,-6.96 0.92,0.2 0.31,-0.36 -0.45,-0.3 0.11,-0.8 -0.56,-0.11 -0.18,0.49 -0.54,0.21 -3.82,-3.04 -1.4,-0.34 -5.04,-3.96 -4.64,-2.85 0.23,-0.56 0.62,0.69 3.14,1.7 0.45,0.74 1,0.13 0.51,0.81 0.62,-0.07 0.75,1.11 0.5,-0.13 -0.54,-0.59 0.07,-0.7 0.71,-0.22 0.04,-0.4 -0.29,-1.18 -1.48,-2.02 -1.28,0.03 0.11,1.39 -1.12,0.24 -1.09,-1.43 -0.6,0.53 -1.04,-0.19 -0.18,-0.93 -1.63,-1.49 -2.1,-0.87 -0.25,-0.46 -0.58,0.4 -1.08,-0.5 -0.79,-1.06 0.07,-1.15 -1.39,-1.6 0.62,-0.28 1.21,1.17 0.69,-1.18 -0.6,-0.45 -0.17,-0.77 -0.29,0.03 0.08,-0.85 0.47,-0.52 -0.71,-0.29 -0.04,-0.5 0.52,-0.64 0.08,-0.78 -1.03,-0.68 -0.28,-1.88 -0.51,-0.7 -1.55,-1.02 -0.02,0.52 -0.88,-0.16 -1.89,-1.7 -0.31,-0.82 -1.64,0 0.11,-1.13 -1.25,-0.58 -0.56,0.84 0.28,0.65 -0.35,0.58 -1.92,-2.15 -5.4,-2.7 0.52,-0.63 -0.38,-0.49 -1.32,0.35 -1.52,-2.32 0.68,-1.33 -0.44,-0.63 -1.19,0.43 -0.4,-0.96 -1.27,-0.09 -0.41,0.23 0.24,0.6 -0.24,0.71 0.48,0.27 -0.68,1.09 -0.5,0.23 -0.06,-0.59 -0.38,-0.15 0.21,-0.44 -0.81,-0.31 -1.19,0.2 0.28,0.81 -0.81,0.23 -1.83,-2.13 1.17,-0.17 0.42,-0.44 0.05,-0.8 0.93,0.87 0.89,-0.43 0.23,-0.99 0.68,0.15 0.46,-0.49 -0.34,-1.31 -1.1,-0.04 -1.02,0.64 -0.87,1.83 -1.57,-0.48 -0.16,0.52 -0.63,-0.11 -0.37,-1.12 -1.72,-1.57 -0.47,0.45 1.6,1.16 0.08,0.75 -1.6,-1.01 -2.87,-0.52 -0.18,-0.33 2.04,0.27 0.07,-1.96 -0.5,-0.04 -1.61,-1.32 -1.08,0.28 -0.37,-0.69 0.17,-2.66 0.24,-0.09 -0.35,-1.08 -0.45,-0.16 -0.04,-0.67 0.7,-2.13 0.35,0.04 0.02,-0.83 2.14,-3.42 0.7,-2.41 1.04,-1.11 0.25,0.11 -0.21,0.99 -0.86,0.28 -0.59,2.71 0.42,0.55 0.31,-0.17 0.38,-0.98 -0.34,-0.58 0.17,-0.27 0.34,0.51 0.81,-1.72 0.18,-1.67 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 230.32786,183.56244 -1.03,-0.12 0,0 0.1,-0.52 0.48,0 0.45,0.64 z m -1.68,-0.71 0.1,-1.54 0.22,0.97 -0.32,0.57 z m -34.04,-28.51 0.63,0.87 -0.19,0.34 1.34,0.61 -0.29,0.39 -1.5,-0.91 0.01,-1.3 z m -42.07,-52.81 0.48,1.56 -0.27,1.14 0.96,1.2 1.04,2.6 -0.42,0.37 -0.1,1.38 -1.54,3.96 -0.05,1.02 -0.74,0.63 -0.48,-0.47 -0.77,0.11 -1.21,-1.14 -1.34,-0.07 -0.31,-0.56 -0.52,-0.01 -0.13,-0.37 -2.03,-1.13 1.66,-1.22 0.59,-0.87 -0.39,-3.25 0.71,-2.99 0.59,-0.87 1.34,0.23 0.99,-0.9 1.94,-0.35 z m -58.919998,-72.960002 0.83,0.13 -0.05,0.64 -1.46,-0.41 -0.02,-0.35 0.7,0 z m -3.73,-1.81 1,0.48 0.71,1.44 1.33,0.95 0.53,1.09 -0.28,0.68 -0.8,-0.65 -0.7,0.08 -1.04,-0.54 -0.88,-0.91 -0.39,-0.99 0.16,-1.44 0.36,-0.19 z m 150.529998,14.22 1.05,1.04 -0.94,1.28 0.52,1.91 1.64,2.84 0.24,1.6 -0.5,1.28 0.02,1.81 -1.57,0.07 -0.04,0.62 2.73,2.65 0.08,2.42 1.04,0.92 -0.67,1.61 0.11,0.81 1.1,1.47 -0.06,1.19 1.93,6.15 -0.28,1.81 -0.85,0.53 0.16,0.99 1.45,1.32 0,1.11 -1.27,2.57 -0.59,4.93 0.34,1 0.57,0.03 0.75,0.96 0.67,6.22 -0.01,2.6 -0.8,0.95 -0.16,0.9 0.25,5.670002 -0.29,0.51 -1.38,0.68 -0.1,2.69 -1.49,1.27 0.46,2.54 -0.85,1.28 0.8,2.65 -1.48,2.62 -0.19,1.04 0.83,1.95 -0.42,2.9 1.55,1.81 2.25,0.86 -0.59,1.19 -0.93,0.1 -0.97,1.22 -1.15,0.12 -1.4,1.05 -0.51,0.03 -1.77,-1.31 -0.77,-0.14 -1.45,0.85 -2.53,0.49 -1.04,1.39 0.19,0.6 1.56,1.08 -0.59,2.75 0.39,0.7 1.83,0.74 2.09,2.98 0.38,1.66 -0.7,2.45 0.52,0.65 2.82,1.7 0.63,2.09 0.97,1.42 1.63,4.07 0.04,1.72 -1.25,3.14 0.47,3.45 -0.73,0.42 -0.02,0.46 3.54,1.84 2.02,-0.62 1.77,0.39 0,0 -0.31,1.78 -3.12,3.88 0.29,2.49 -1.86,0.55 -2.06,3.86 -4.09,0.98 -0.47,0.87 -0.11,2.49 -2,0.58 -1.28,1.17 -2.93,1.7 -0.34,-0.35 0.05,-0.81 -0.48,0.08 -0.13,-0.78 -0.79,-0.91 -0.5,0.94 -0.39,-0.17 -0.24,-1.87 -0.29,0.19 0.15,1.56 0,0 -0.42,0.01 -0.24,0.54 -1.26,-1.71 0.12,-1.01 -1.35,-2.45 -2.29,-2.56 -1.45,-1.02 -0.85,-0.13 1.05,0.16 0.05,-0.36 -0.4,-0.93 -0.57,0.04 -0.36,-0.75 -0.64,0.2 -0.07,-0.57 -0.39,-0.09 -0.73,1.06 0.42,0.75 -2.67,-0.07 -0.5,0.65 -2.54,-1 -1.19,-1.04 -0.93,-1.27 0.01,-0.96 -1.03,-2.8 -1.35,-1.86 0.19,-0.15 0.97,1.35 0.18,-0.86 -0.63,-0.42 0.25,-0.38 -0.31,-1.63 -1.73,-1.38 -0.3,0.36 -0.42,-0.41 -1.08,0.96 -1.03,-0.68 -4.98,-1.24 -3.05,-3.03 -1.39,-0.7 0.31,-0.23 -0.41,-0.92 0.08,-1.29 -0.63,-0.39 -0.52,0.37 -0.7,-0.53 -0.15,-1.27 -0.39,-0.05 -0.4,-0.75 0.25,-2.06 -0.62,-1.18 0.23,-0.39 -0.81,-0.79 0.11,-0.77 1.37,-0.98 -0.75,-0.12 -0.24,0.79 0.17,-1.54 0.69,-0.35 -0.69,-0.12 -0.29,-1.11 0.48,-0.37 -0.15,-0.75 0.41,-0.77 0.86,0.18 0.29,-0.52 -0.99,-0.79 -0.82,-0.19 -0.54,0.48 -0.63,-0.53 -3.87,-0.91 -0.33,-0.84 -1.64,0.87 0.56,0.91 -0.19,1.05 -1.22,-0.44 -0.97,-1.01 0.4,-0.56 -0.58,-0.15 -0.02,-0.71 -1.34,-0.27 -1.32,0.75 -1.49,-1.36 -0.98,-0.33 -0.88,-1.28 -0.97,-0.3 -0.69,-0.84 -0.19,-0.87 -1.06,-1.24 -0.08,-0.87 -0.69,-0.9 -0.39,0.08 -0.46,-1.58 -0.4,0 -1.16,-1.13 -0.1,-1.37 -0.87,-0.75 -5.45,-2.01 -0.16,-1.14 -1.16,-2.62 -4.01,-3.66 -0.48,-1.25 0.57,-0.07 0.51,-0.58 0.53,1.17 0.64,-0.41 -0.02,-0.85 -0.63,-0.49 -0.53,0.38 -0.48,-0.74 -0.27,0.21 -1.28,-1.02 -1.21,-0.29 -0.44,-1.13 -0.97,-0.77 -0.27,-0.74 -1.91,-0.55 0.56,-0.73 -0.42,-0.83 -0.05,-1.32 -0.34,-0.19 0.46,-0.98 -0.47,-1.12 -0.4,-0.14 -0.05,-0.62 -0.69,-0.07 0.53,-1.81 -0.62,-1.810002 -0.64,-0.59 -1.32,0.01 -0.82,0.4 -1.66,-0.87 -0.21,-1.1 1,-2.8 -0.3,-0.57 -0.99,-0.54 -0.16,-1.18 -1,-0.83 -1.67,-2.84 -0.93,-0.65 -0.65,-1.94 -1.14,-1.61 -0.33,-1.6 -1.19,-0.57 -0.64,0.18 -0.24,-0.33 0.35,-2.46 -0.62,-1.47 0.13,-3.46 -0.51,-1.41 -1.95,-1.89 -0.11,-3.05 -0.97,-2 -2.41,-2.05 -2.54,-4.66 -0.91,-3.44 0.73,-2.28 0.06,-3.03 0.3,0.08 0.67,-1.01 0.08,-1.12 -0.5,-2.75 -0.31,0.11 -0.19,-0.79 -0.47,0.03 -2.31,-1.36 -0.67,-1.1 -0.82,0.73 -3.88,-0.94 -0.24,-0.35 -0.31,0.24 -2.58,-0.49 -0.1,-0.48 -0.56,-0.27 -1.29,-0.16 0.23,-1.47 -0.57,-1.59 0.06,-0.83 -0.54,-0.92 -1.19,-0.97 -4.33,-1.85 -0.13,-0.59 -0.38,0.14 -0.22,-0.52 -0.38,0.58 -0.79,-0.55 -0.58,0.69 -0.18,0.62 0.35,-0.07 0.21,0.52 -0.71,0.95 -0.71,-0.08 -0.41,1.19 -2.85,-0.1 -3.13,-1.43 -1.44,-1.55 -2.909998,-1.6 -0.44,-0.59 -0.75,-0.16 -2.41,-2.33 -2.15,-0.14 -1.28,-0.58 -0.98,-1.17 -0.82,0 0,0 -3.82,-2.76 -0.92,-0.13 -0.96,-0.95 0.6,-0.98 -0.24,-0.98 0.42,-2.67 -0.29,-1.14 0.62,-1.83 -1.4,-1.99 1.81,-2.43 0.05,-1.34 0.47,-0.48 0.6,-2.05 1.34,-0.01 0.47,0.4 0.85,-0.51 0,0 93.649998,34.22 57.68,-0.13 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 620.40786,397.20244 -4.06,1.46 -0.39,0.56 -1.89,0.16 6.34,-2.18 z m 28.1,-6.87 1.14,3.72 0.63,0.91 1.44,1 0.99,0.05 0.69,1.06 0.53,-0.13 0.08,-0.42 0.36,0.16 1.11,1.42 -0.18,1.97 0.45,0.32 1.08,2.59 1.22,1.83 3.47,2.33 0.87,1.43 1.31,0.66 1.5,-0.15 2.21,1.12 1.29,-0.64 1.68,-0.11 0.3,-0.72 -0.34,-1.82 0.3,-1.3 2.79,-0.13 3.65,0.8 1.64,1.55 1.56,0.66 0.77,0.9 0.68,-0.42 3.98,1.58 -0.02,1.64 0,0 -0.21,14.5 -10.56,0.18 0,0 0.53,-1.03 0.76,-0.28 -1.1,-1.79 -1.31,-0.37 -0.19,-0.83 -4.34,-1.2 0.75,-2.66 -1.27,-3.3 -2.56,-1.26 -0.05,-2.01 -1.06,-1.36 -1.21,0.28 -1.19,-0.18 -0.59,0.44 -0.56,-0.3 0.12,-0.59 -1.45,-0.37 -0.71,1.84 -1.95,0.03 -1.77,-0.48 0.04,0.44 -0.43,-0.08 -0.12,0.37 0.41,1.75 -0.39,0.78 -3.29,1.19 -0.57,0.83 -5.83,4.27 -2.42,2.25 -1.91,0.84 -0.81,-0.31 -0.66,-0.87 -0.04,-0.66 -1.21,-1.94 -0.54,-0.2 -0.44,0.35 -1.25,0.06 -0.36,-0.33 0.3,-1.87 -2.07,-2.18 -0.38,-0.93 0.14,-0.58 1.42,-2.12 0.35,-1.69 -2.79,0.09 -0.77,-0.35 -1.39,-1.69 -2.14,-0.85 -0.54,0.61 -1.66,0.28 -0.75,7.08 -0.59,1.16 -1.2,0.79 -1.39,1.87 -0.06,1.61 -2.53,3.17 0,0 -1.93,-0.76 -0.38,-2.2 0.38,-1 -0.17,-1.25 -1.11,-3.08 -0.44,-0.48 -2.51,-0.97 -0.42,-0.58 -1.16,-0.04 -1.44,-2.03 -1.39,-0.39 -1.06,-0.96 0.02,-3.02 -0.56,-1.47 -0.12,-2.83 -0.51,-0.4 0.86,-0.87 0.92,0.51 0.24,-0.29 -2.27,-0.39 1.89,-0.89 0,0 4.46,-1.51 0.14,1.24 2.66,-0.47 0.58,-0.41 -0.29,-0.97 0.71,-0.41 1.04,-0.14 0.23,0.44 0.75,0.06 1.31,-0.24 0.6,-0.63 -0.12,-1.19 3.28,-0.8 0.25,0.68 0.85,-0.87 5.38,-0.23 0.88,0.41 -0.67,0.56 0.07,0.89 0.8,0.04 0.8,-0.44 0.07,0.28 0.67,0 0.38,-0.56 -1.83,-0.75 1.08,-0.46 2.89,0.28 2.22,-0.3 3.01,-1.63 2.29,-2.75 5.28,-0.99 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 517.14786,239.79244 -0.24,4.46 -0.28,0.09 0.52,-4.55 z m 6.77,-26.4 0.46,0.16 -2.84,6.97 -0.33,-1.37 0.25,-0.9 0.58,-0.5 0.14,-1.01 1.74,-3.35 z m -8.7,81.32 -2,1.4 -1.52,-1.64 -0.42,-1.14 -1.2,-1.05 -1.35,-0.17 -1.57,-1.2 -1.15,-0.39 -0.72,-1.3 -2.54,0.29 -0.4,0.7 0.21,0.69 -1.98,0.44 -0.15,-0.6 -0.41,0.18 -0.73,-0.58 -1.11,-0.22 -4.16,0.25 -1.78,1.01 0,0 -0.96,-0.17 -2.14,0.44 -1.89,-1.18 -0.71,0.79 -2.32,0.08 -2,-0.39 -1.79,0.22 -2.15,-2.85 -0.92,-2.52 -0.83,-1.17 -1.38,-1.08 -1.69,-0.56 -0.81,-1.29 -0.62,-0.33 -0.97,0.56 0.05,1.03 -0.65,0.43 -2.2,-0.73 -3.26,-0.26 -4.21,-1.37 -1.09,-0.93 -0.19,-0.69 -0.23,-2.98 0.34,-3.63 -0.48,-1.15 -1.03,-0.78 -0.15,-2.05 -0.89,-1.06 0,0 0.42,-0.77 -0.54,-1.35 0.8,-0.68 3.1,0.38 0.21,-1.77 -0.39,-2.84 0.33,-0.96 1.47,-1.77 0.67,-2.81 2.31,-1.23 2.55,0.68 0.71,-0.14 1.75,-0.97 0.34,-1.51 0.36,-0.1 2.25,0.45 -0.76,-2.34 -1.37,-0.78 -1.4,-3.63 -1.76,-2.09 0.86,-6.77 -1.26,-2.63 -1.84,0.09 -0.22,-0.28 0.69,-2.1 2,-1.35 2.87,-1.27 1.31,-2.13 1.75,0.11 1.12,-1.6 1.15,-0.48 0.36,-1.03 0.38,-0.13 0.39,1.52 1.11,-0.45 0.47,-1.6 0.92,-0.69 0.91,-0.09 0.38,-1.67 -0.67,-0.36 -0.6,-2.24 0.25,-0.4 1.26,-0.41 1.46,-1.97 0.51,0.04 0.6,1.17 2.8,0.23 0.75,-2.03 0.99,-1.14 4.38,-0.85 0.99,-1.13 0.77,-0.08 1.37,-1.44 1.25,-0.63 0.59,-1.37 1.54,-1.57 -0.02,-0.52 -0.4,-0.27 -2,-0.63 -0.99,-0.83 0.41,-0.8 -0.69,-1.57 0.21,-2.07 0.47,-0.77 -0.59,-1.52 0.3,-3.34 -0.8,-1.02 -0.13,-1.47 -0.69,-0.44 -3.39,0.68 -1.06,-0.15 -2.66,1.52 -0.96,-0.54 -1.19,-2.34 -0.65,-0.59 -3.28,-0.46 -0.38,-0.66 -0.82,-0.46 0.9,-0.33 -0.76,-1.34 0.36,-0.72 -0.18,-0.6 -0.63,-0.05 -0.75,0.74 -0.69,-0.09 -1.17,-1.62 0.06,-0.99 -1.42,0.12 -1.81,-2.48 -1.25,-4.14 -1.88,-0.23 -0.85,-1.9 -0.67,-0.4 -0.88,0.38 -0.8,-0.82 0.23,-3.22 0.47,-1.29 -0.52,-0.78 -1.26,-0.66 -1.46,0.05 -0.13,-1.12 0.81,-2.39 1.64,-1.39 -0.42,-3.19 -1.15,-1.14 -0.24,-1.38 0.22,-2.46 -1.27,-0.87 1.17,-1.42 -0.05,-0.88 -4,-0.19 -0.6,-0.45 0.35,-1.07 -0.27,-0.79 0.62,-0.69 2.78,-0.8 1.28,-1.72 0.65,-0.34 0,0 0.18,0.29 1.26,0 0.11,0.71 0.7,0.18 0.18,-0.39 0.75,0 0.7,1.05 0.34,-0.27 0.36,0.2 0.71,1.22 -0.38,1.72 0.75,0 0.44,0.53 -0.34,2.9 -0.99,1.99 1.04,0.14 -0.13,0.93 0.27,0.28 0.74,-0.19 0.36,0.55 0.39,1.93 -0.35,2.01 0.31,0.46 -0.52,0.66 0.16,1.22 0.76,0.16 0.83,1.21 -0.29,0.39 0.46,0.73 1.06,0.31 0.42,1.5 0.77,0.27 1.02,2.08 -0.06,0.78 0.88,1.05 0.47,2.36 0.42,0.22 0.1,2.37 1.22,0.55 0.71,1.17 -0.47,1.26 0.97,1.02 0.81,-0.42 0.8,0.55 0.87,-0.21 0.48,0.13 0.05,0.6 0.75,-0.11 0.74,0.58 0.36,-0.28 1.93,-0.01 0.33,0.89 1.29,0.26 1.52,2.03 2.38,-0.11 0,0.58 0.31,-0.11 0.18,0.44 0.5,-0.48 0.94,0.46 -0.05,0.42 1.6,-0.35 0.01,0.66 1.35,1.21 1.32,-0.12 0.04,0.76 0.75,0.8 1.49,0.86 0.79,0.07 0.36,0.44 0.54,-0.52 0.7,0.6 1.73,-0.51 0.37,0.72 0.67,0.03 0.1,-0.51 1.26,-0.17 0.35,0.36 2.62,-0.27 0.7,0.42 0.74,-0.35 0.39,0.23 -0.15,0.48 0.83,0.24 2.89,-0.01 1.11,1.91 0.45,-0.13 0.5,0.98 0.39,-0.27 0.73,1.35 1.9,0.57 -0.19,0.31 0.64,0.43 1.51,-0.27 -0.11,-1.67 0.7,-0.59 0.48,0.32 0.18,-0.35 0.93,-0.04 0.07,-0.51 1.62,-0.27 1.37,-0.05 0.35,0.28 -0.33,4.95 -0.98,3.8 -5.65,11.07 -0.79,-0.25 1.81,-3.11 -0.71,-0.57 0.46,-0.61 -0.41,-0.59 -1.12,0.05 0.16,-0.55 -1.54,-0.16 -0.62,-0.79 -1,1.08 0.73,-0.13 0.69,1.12 0.22,-0.19 0.33,1.1 -0.31,0.25 -0.24,-0.53 -0.63,0.2 -0.38,0.77 0.35,0.19 0.31,1.24 -0.77,0.28 -0.3,-1.37 -0.83,0.61 -0.36,-0.59 -0.01,-1.12 -1.79,-0.24 0.06,0.44 -0.87,0.81 0.51,0.81 -0.31,0.94 -0.52,0.08 -0.89,-0.6 -0.21,0.56 0.56,0.09 0.65,0.89 0.31,-0.21 0.58,0.32 -0.19,0.78 0.89,0.66 -0.77,1.06 0.06,1.31 -1.34,2.92 0.4,0.45 0.74,-0.03 0.4,0.74 0.86,0.2 -1.51,1.13 -0.23,0.99 -0.42,0.07 -0.05,0.69 0.6,0.36 0.13,0.78 -0.54,2.97 0.41,0.11 0.33,0.83 -0.87,4.23 -0.51,0.04 -0.28,-0.54 0.13,-1.43 -0.97,0.28 -0.87,-0.65 0.23,0.93 -0.69,0.44 0.41,0.56 -0.3,1.03 0.92,2.21 0.38,0.18 -0.22,0.7 0.6,-0.15 0.12,-1.64 0.76,-0.7 0.24,3.22 -0.68,6.41 -0.35,0.47 -0.23,-0.08 0.26,-0.56 -0.59,-0.08 -0.05,0.5 0.89,0.43 0.04,7.06 0.88,0.46 0.04,0.41 -0.44,0.32 -0.35,2.07 0.18,0.66 0.35,0.09 0.1,-1.98 -0.25,0.04 -0.08,-0.71 0.53,-0.31 -0.94,9.63 0.3,11.01 -0.21,3.59 -0.47,0.65 -0.38,1.92 -1.25,1.51 -0.98,2.08 -0.17,1.21 0.98,0.73 0.05,2.82 -0.39,-0.03 -0.01,0.99 0.56,1.95 0.45,-0.13 1.17,2.73 -0.16,0.36 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 505.90786,362.68244 2.06,0.38 0.61,-0.24 1.55,-1.83 0.49,0.07 0.71,1.06 4.1,3.41 -0.13,1.73 0.84,0.17 1.53,-0.5 0.59,0.38 1.21,1.24 0.31,1.17 0.67,0.6 0.94,0.2 -0.28,1.15 -0.82,0.55 -2.68,0.51 -0.84,-0.32 -1.4,2.33 -1.24,0.84 -0.77,0.05 -1.46,-0.99 -0.57,0.04 -3.07,2.68 -0.86,0.14 -4.06,-2.24 -1.18,-1.31 -0.54,-1.38 -1.32,-1.38 -3.03,-2.31 -1.16,-0.37 -0.7,0.29 0,0 -0.53,-0.6 -0.76,0.25 -0.96,-1.83 0,0 5.01,-1.71 1,0.23 2.09,-0.28 1.45,-1.21 0.82,-1.47 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 524.98786,315.32244 -0.73,2.05 -0.82,0.98 -0.12,-1.51 1.67,-1.52 z m -7.43,-10.52 1.69,3.57 -0.48,-0.14 -0.97,-1.58 -0.24,-1.85 z m 2.09,1.04 1.9,2.41 5.33,4.9 -0.65,3.08 -1.71,4.14 -0.52,0.45 -0.18,-2.06 1.77,-3.43 -0.13,-1.33 -1.75,-1.65 -1.29,-2 -2.83,-3.13 -1.48,-3.68 -0.47,0.12 0.08,-0.8 1.93,2.98 z m -27.41,-14.46 1.78,-1.01 4.16,-0.25 1.11,0.22 0.73,0.58 0.41,-0.18 0.15,0.6 1.98,-0.44 -0.21,-0.69 0.4,-0.7 2.54,-0.29 0.72,1.3 1.15,0.39 1.57,1.2 1.35,0.17 1.2,1.05 0.42,1.14 1.52,1.64 2,-1.4 0,0 0.63,5.37 1.66,4.54 -0.12,1.02 -0.4,0.22 0.62,1.35 0.43,3.26 0.83,0.93 0.08,1.11 1.85,3.26 1.51,-0.34 0.52,0.75 -0.38,1.3 0.5,1.74 0.99,0.8 0.07,1.12 0.51,0.17 0.74,2.9 4.69,9.94 0.64,2.94 0.79,1.36 4.18,4.12 0.71,1.22 5.91,6.38 3.46,4.36 0.64,1.38 2.61,2.89 1.15,3.28 0.11,2 0.64,1.06 -0.1,1.11 1.52,2.13 -0.18,1.8 0.67,2.64 1.72,1.32 1.22,0.46 0.17,0.7 0.99,0.45 0.96,1.36 -0.31,0.65 0.21,0.9 0.76,0.66 2.41,0.34 0.3,2.52 0.67,1.77 0.86,0.93 3.52,1.69 0.01,0.72 -2.04,-1.35 -0.97,-0.08 -0.06,0.3 0.47,0.15 0,0.65 0.75,0.32 0.31,0.61 -0.12,0.24 -0.67,-0.33 -0.34,0.29 0.17,0.5 1.17,-0.13 -0.07,-0.66 0.91,-0.27 0.63,0.3 0.22,-1.19 1.8,1.17 2.71,0.74 9.53,0.24 3,2.35 0.58,1.17 2.21,0.61 3.33,0.3 0.51,0.43 0.57,1.84 0.76,0.77 0.13,0.67 2.8,2.79 0.56,2.39 2.67,1.28 3.79,-0.39 7.27,-1.8 0,0 -1.89,0.89 2.27,0.39 -0.24,0.29 -0.92,-0.51 -0.86,0.87 0.51,0.4 0.12,2.83 0.56,1.47 -0.02,3.02 1.06,0.96 1.39,0.39 1.44,2.03 1.16,0.04 0.42,0.58 2.51,0.97 0.44,0.48 1.11,3.08 0.17,1.25 -0.38,1 0.38,2.2 1.93,0.76 0,0 -3.72,2.89 -1.95,0.86 -0.94,1.13 0,0 -28.57,-1.75 0.33,-1.37 -0.64,-0.57 0.01,-0.99 -3.45,-2.78 -3.36,-4.41 0.23,-1.13 1.49,-0.66 0.18,-0.68 -1.37,-0.84 -0.42,-0.06 -1.21,1.08 -3.66,0.92 -3.01,2.11 -2.87,0.16 -1.26,0.66 -1.96,-0.58 -2.18,-4.43 0.17,-1.17 -0.34,-0.72 0.73,-0.68 0.99,-2.58 0.81,-1.11 0.22,-1.25 -1,-3.79 -0.52,-0.44 -2.03,-0.48 -1.15,0.19 -1.43,-0.52 -2.47,0.79 -0.7,-0.35 0.53,-0.9 -1.38,-0.09 -1.02,-1.89 -1.39,-0.81 -1.31,0.38 -1.96,-1.56 -0.64,-0.9 -0.6,-2.74 0.58,-1.27 -1,-0.35 -1.15,-1.15 -0.65,0.61 -0.05,0.86 0.5,0.74 -0.3,0.96 -1.17,2.18 0,0 -1.85,-2.17 -2.58,-0.82 -1.39,0.8 -0.96,1.05 -1.43,-0.1 -1.86,-3.13 0.17,-0.75 -3.81,-1.12 -0.85,-0.72 -0.36,-1.12 0,-2.98 1.86,-2.41 0.07,-0.55 -0.52,-6.12 0.18,-0.9 4.82,0.22 0.53,-0.12 0.16,-0.7 -0.11,-1.29 -0.47,-0.59 -2.93,-1.27 -3.63,-0.82 -1.44,-0.99 -0.34,-0.42 0.56,-1.38 -1.38,-2.98 0.24,-0.7 0.57,-0.24 0.98,-2.63 0.67,-0.87 0.34,-0.97 -0.31,-0.98 0.19,-0.81 1.66,-4.28 2.15,-2.98 -0.07,-0.51 -7.06,-2.49 -0.82,0.67 -1.22,1.95 -1.61,1.4 -0.59,-0.19 -0.86,-1.78 -2.04,0.22 -0.68,-0.55 -0.46,-2.37 -0.06,-4.01 1.17,-0.76 1.61,0.92 1.5,-2.48 -0.48,-1.12 -2.22,-1.22 -0.81,-0.83 -0.16,-0.85 0.36,-0.83 -0.81,-0.6 -0.87,0.19 -0.16,-0.3 1.23,-0.76 0.01,-1.79 -2.03,0.32 -1.19,-0.39 -0.27,1.02 -0.88,0.94 -0.08,0.84 -0.97,0.75 -0.7,2.56 0,0 -1.45,-0.95 -0.83,0.36 -2.14,2.33 -1.6,0.73 -1.89,2.23 -2.48,1.15 -1.33,1.55 -0.5,0.22 -0.88,-1.08 -1.17,-2.59 0.25,-2.08 0.58,-1.3 0.33,-3.66 0.65,-0.54 0.31,-0.86 2.39,-2.16 0.46,0 1.34,1.39 1.45,-0.23 0.25,-0.63 -0.56,-1.05 0.63,-2.21 1.86,-2.46 -2.53,-3.42 -2.03,-0.62 -0.86,0.89 -1.32,-0.06 -1.26,-0.66 -1.83,-1.71 0.3,-2.66 -0.3,-0.75 -0.85,-0.17 0,0 -0.13,-3.35 -1.33,-0.22 -0.89,-3.31 0.21,-0.85 1.26,0 -0.05,-0.7 1.05,0.05 0.29,-0.82 1.71,-0.79 -1.19,-1.11 -0.04,-0.48 -0.45,0.12 -0.59,-0.73 0.13,-1.23 -0.35,-0.26 0.58,-0.53 -1.14,0 -0.38,-0.38 0.27,-0.42 2.18,0.26 0.41,-0.27 0.25,-0.67 -0.31,-2.55 1.06,-0.71 2.53,-0.05 -1.2,-3.56 -0.65,-0.73 -4.44,-1.38 -2.36,0.04 -0.53,-0.26 -0.23,-0.95 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 771.88786,315.18244 0.33,5.3 -0.14,0.76 -0.88,0.87 -0.47,3.16 1.33,3.2 -0.1,0.97 -1.14,2.05 -0.49,2.45 -0.86,1.08 -0.26,1.58 -0.86,1.17 -1.72,0.82 -3.13,2.7 -3.11,1.84 -1.51,-0.11 -1.53,0.44 -1.14,-1 -1.17,0.56 -1.5,2.76 0.25,2.19 -0.36,0.05 -0.93,-1.68 -1.01,-0.01 -0.5,0.42 -0.79,2.37 -0.46,0.48 -5.51,1.98 -1.78,1.04 -1.88,1.6 0.27,0.69 -0.3,0.32 -1.08,-0.92 -1.92,1.78 -1.19,0.41 -2.43,0.03 -2.43,1.05 -1.39,1.39 -3.54,0.17 -0.56,0.49 0.17,0.87 -0.32,1.45 -0.93,2.01 0,0 -0.44,-0.46 -0.79,-3.44 -3.16,-3.58 -1.18,-2.49 -3.85,-2.1 -1.99,-4.46 -1.82,-1.16 -0.57,-1.04 0.11,-0.91 -1.03,-1.76 -0.42,-0.28 -0.79,0.73 -0.4,1.01 -0.48,0.09 -0.94,-0.98 -1.12,0.34 -0.44,-0.18 -0.97,-2.01 -4.13,-0.52 0.16,-7.29 0,0 0.07,-1.38 0.61,-0.59 0.72,-1.71 -0.15,-0.52 -0.33,0.21 -1.11,3.43 -0.56,0.54 0.3,-1.55 1.02,-2.96 1.05,-1.38 5.6,-3.54 2.5,-0.57 2.08,-1.28 0.92,-0.01 0.26,-0.45 0.98,-0.31 2.9,-0.67 0.06,0.4 0.57,-0.01 -0.12,-0.29 0.65,-0.36 4,-0.73 16.6,-2.2 5.03,-1.91 0.56,-1.4 5.5,-1.17 3.23,0.26 1.33,-0.37 2.26,-1.47 2.09,0.47 -0.17,0.45 1.73,0.63 3.59,0.25 0.5,0.81 1.01,0.57 2.17,0.09 1.9,0.54 0.42,-0.41 -3.78,-0.93 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="m 391.19786,219.24244 0.02,-1.63 0.63,-0.53 5.4,-1.07 9.4,0.61 2.54,1.71 2.5,0.97 1.96,1.66 2.16,3.07 1.47,-0.41 1.16,0.32 0.62,3.56 2.83,0.02 0.92,-0.88 2.27,-0.51 2.96,0.37 1.25,0.82 1.92,3.76 1.37,1.3 2.09,0.81 1.44,-0.37 0.18,-0.78 0.75,-0.32 2.12,0.47 0,0 -0.55,0.42 0,0 -0.81,0.44 -0.36,1.78 -1.19,1 -0.69,1.72 -0.98,0.5 -1.58,-0.07 -0.67,0.52 -0.21,1.49 -0.92,1.78 -1.36,0.88 -1.87,0.48 -0.64,0.62 -0.83,3.45 1.01,1.18 -1.18,2.96 -1.1,1.54 -4.74,1.59 -3.48,5.14 -3.56,2.13 -2.28,0.84 -0.85,1.03 -0.52,1.44 -2.94,0.58 -2.32,-0.93 -0.66,0.2 -0.87,1.67 0.62,0.81 -0.51,1.69 1.03,3.02 -1.26,3.99 -0.2,1.26 0.25,1.51 0.94,1 4.18,2.53 1.11,1.32 2.31,0.34 1.07,0.58 0.92,2 1.48,2.02 2.08,0.05 2.43,-0.73 4.45,-4.61 1.46,-0.7 0.71,-0.05 1.97,2.58 -0.19,1.65 -3.3,7.3 1.38,3.86 -0.36,1.64 -0.39,-0.03 -0.13,0.55 0.26,0.18 -0.35,0.96 -1.93,3.97 0,0 -0.81,0.94 -0.97,-0.63 0,0 -0.28,-0.39 -2.09,-0.75 -2.67,-2.35 -2.13,-1.14 -3.54,-0.91 0,0 -1.14,-2.04 -0.59,-2.44 -4.44,-2.63 -1.33,-1.34 -0.77,-1.39 -0.73,0.17 -0.39,1.26 -1.21,0.92 -3.47,1.97 -1.79,0.38 -1.07,0.73 -0.93,3.24 -3.33,4.59 -1.24,2.87 0.07,1.21 2.34,2.26 0,0 -0.09,2.21 0.65,1.85 2.78,1.78 -0.48,2.69 -0.96,1.31 -2.29,1.4 -3.58,2.91 -1.52,-0.5 -1.37,0.49 -0.63,0.54 -0.33,2.02 -1.47,0.52 -0.11,0.37 -1.71,-0.43 -1.34,0.26 -0.22,0.56 -0.88,-0.07 -0.99,0.48 -2.9,-1.61 -2.26,0.19 -0.94,-0.49 -0.75,-1.7 -0.75,-0.81 -2.5,-0.62 -0.17,-0.5 4.04,-1.81 1.17,-1.12 0.1,-1.02 -0.34,-0.58 -0.67,-0.14 -1.02,0.49 -0.93,-0.54 -0.85,-2.48 1.79,-0.46 1.62,-1.88 0.33,-2.47 -0.18,-1.79 2.92,-2.07 1.77,-1.73 3.28,-1.68 1.26,-0.2 0.74,-0.69 1.19,-2.91 0.7,-3.47 -0.51,-0.38 -2.15,-0.14 -0.5,-0.44 0.76,-1.51 -0.41,-0.86 -2.17,-0.17 -1.88,0.73 -0.31,1.87 1.24,1.03 -2.39,1.89 -0.93,1.73 -0.9,0.44 -0.71,-0.52 -1.27,-0.2 -0.69,0.8 -1.93,-0.02 -0.58,-0.66 0.09,-0.45 3.78,-6.17 0.04,-1.16 -0.6,-1.93 -1.4,-1.32 -1.42,-0.51 -3.43,0.67 -0.63,0.57 0,7.04 -0.38,1.16 -1.16,-0.17 -1.21,-1.78 0.04,-3.32 1.69,-4.22 1.45,-1.87 1.1,-0.82 0.17,-0.91 -1.81,-1.01 -2.66,0.38 -2.16,1.53 -0.11,0.79 1.74,3.84 0.16,1.43 -1.03,1.18 -1.8,1.14 -0.27,-0.49 1.05,-3.24 -0.53,-0.37 -3.1,1.17 -0.36,3.03 -1.35,-0.34 -1.08,1.21 0,0 -0.72,-0.43 -0.43,-0.96 -0.2,-2.77 0,0 1.16,-3.05 1.01,-1.51 3.21,-1.42 0.25,-0.63 0.16,-5.55 -0.85,-3.09 0.08,-1.28 1.37,-2.73 0.61,-0.37 1.29,-5.77 0.09,-1.88 2.32,-2.89 2.8,-2.42 -0.89,-4.27 0.45,-1.2 -0.37,-1.89 0.31,-1.68 -0.37,-1.65 -0.78,-0.51 0.23,-1.32 2.4,-0.72 2.26,-2.14 2.07,-2.83 2.4,-1.82 0.47,-1.34 1.71,-1.37 3.9,0.27 2.23,0.7 2.25,-0.8 1.12,0.1 1,0.7 2.66,0.87 0.76,-0.91 1.68,0.23 6.07,-0.58 0.12,-0.68 -0.5,-0.37 0.02,-0.41 0.97,-0.52 -1.02,-4 -1.21,-0.45 0.81,-4.9 -0.8,-0.94 -1.53,-0.71 -0.36,-1.1 -0.75,-0.34 -0.04,-1.65 z" fill="#E3EAF4" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <circle cx="400.3" cy="300.8" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="400.3" cy="300.8" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="73.2" cy="70.1" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="73.2" cy="70.1" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="151.7" cy="268.2" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="151.7" cy="268.2" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="436.9" cy="331.2" r="18.37864787372622" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="436.9" cy="331.2" r="13.37864787372622" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="369.3" cy="332.9" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="369.3" cy="332.9" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="482.8" cy="373.6" r="25.0" fill="#C89B3C" opacity="0.15"/>
+  <circle cx="482.8" cy="373.6" r="20.0" fill="#C89B3C" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="472.1" cy="372.6" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="472.1" cy="372.6" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="484.8" cy="388.7" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="484.8" cy="388.7" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="464.1" cy="206.4" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="464.1" cy="206.4" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="514.8" cy="370.9" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="514.8" cy="370.9" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="464.7" cy="333.1" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="464.7" cy="333.1" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="758.5" cy="361.6" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="758.5" cy="361.6" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="452.2" cy="277.8" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="452.2" cy="277.8" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="274.2" cy="226.1" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="274.2" cy="226.1" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="494.2" cy="221.0" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="494.2" cy="221.0" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="556.1" cy="359.3" r="15.666666666666666" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="556.1" cy="359.3" r="10.666666666666666" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="736.1" cy="337.7" r="14.299831645537221" fill="#0B4AA2" opacity="0.15"/>
+  <circle cx="736.1" cy="337.7" r="9.299831645537221" fill="#0B4AA2" stroke="#ffffff" stroke-width="2"/>
+  <text x="50" y="336" text-anchor="end" font-family="Sora, Arial, sans-serif" font-size="30" font-weight="700" fill="#0E1B33">Guadalajara</text>
+  <text x="612" y="136" text-anchor="start" font-family="Sora, Arial, sans-serif" font-size="30" font-weight="700" fill="#0E1B33">Monterrey</text>
+  <text x="368" y="486" text-anchor="end" font-family="Sora, Arial, sans-serif" font-size="30" font-weight="700" fill="#C89B3C">CDMX · mayor concentración</text>
+</svg>
+        </div>
+      </div>
+    </div>
+    <div class="card-grid cols-3">
+      <div class="feat-card"><div class="ic-square"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-9.8-9.5C.6 7.7 2.4 4 6.1 4c2 0 3.4 1 4.9 2.7C12.5 5 13.9 4 15.9 4c3.7 0 5.5 3.7 3.9 7.5C17.5 16.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.5"/></svg></div><h4>47 hospitales en todo el país</h4><p>Presencia en 17 estados de la República, incluyendo las principales zonas metropolitanas.</p></div>
+      <div class="feat-card"><div class="ic-square"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15M14 21v-9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h4>Grupos hospitalarios líderes</h4><p>Red conformada por grupos hospitalarios reconocidos a nivel nacional, más hospitales y clínicas independientes de alta especialidad.</p></div>
+      <div class="feat-card"><div class="ic-square"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M8 13l2 2 6-6M2 13l3-3 3 3-3 3-3-3ZM16 13l3-3 3 3-3 3-3-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div><h4>Instituciones evaluadas y seleccionadas</h4><p>Cada hospital de la red es evaluado por nuestro equipo antes de sumarse, para garantizar calidad y respaldo real.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA SOCIAL — placeholders explícitos, sustituir por testimonios y logos 100% reales antes de publicar. No usar citas ni nombres inventados. -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">LO QUE DICEN NUESTROS AFILIADOS</span>
+      <h2>Historias reales,<br><span class="accent">respaldo real.</span></h2>
+      <p>[ PENDIENTE — sustituir por 2 o 3 testimonios reales y verificables de afiliados de Clinical Pass, con nombre, foto y ciudad. No publicar testimonios ficticios. ]</p>
+    </div>
+    <div class="card-grid cols-3">
+      <div class="feat-card testimonial-card">
+        <span class="quote-mark">&ldquo;</span>
+        <p>[ Testimonio real pendiente — reemplazar por comentario auténtico de un afiliado, con su consentimiento para publicarlo. ]</p>
+        <div class="testimonial-attr">
+          <div class="testimonial-photo">[foto]</div>
+          <div>
+            <h4>[Nombre del afiliado]</h4>
+            <span class="testimonial-city">[Ciudad]</span>
+          </div>
+        </div>
+      </div>
+      <div class="feat-card testimonial-card">
+        <span class="quote-mark">&ldquo;</span>
+        <p>[ Testimonio real pendiente — reemplazar por comentario auténtico de un afiliado, con su consentimiento para publicarlo. ]</p>
+        <div class="testimonial-attr">
+          <div class="testimonial-photo">[foto]</div>
+          <div>
+            <h4>[Nombre del afiliado]</h4>
+            <span class="testimonial-city">[Ciudad]</span>
+          </div>
+        </div>
+      </div>
+      <div class="feat-card testimonial-card">
+        <span class="quote-mark">&ldquo;</span>
+        <p>[ Testimonio real pendiente — reemplazar por comentario auténtico de un afiliado, con su consentimiento para publicarlo. ]</p>
+        <div class="testimonial-attr">
+          <div class="testimonial-photo">[foto]</div>
+          <div>
+            <h4>[Nombre del afiliado]</h4>
+            <span class="testimonial-city">[Ciudad]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:56px;">
+      <p style="text-align:center;font-size:12px;color:var(--text-soft);text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px;">Compatible con pólizas de las principales aseguradoras de Gastos Médicos Mayores</p>
+      <div class="insurer-row">
+        <div class="insurer-logo">[ LOGO ]</div>
+        <div class="insurer-logo">[ LOGO ]</div>
+        <div class="insurer-logo">[ LOGO ]</div>
+        <div class="insurer-logo">[ LOGO ]</div>
+        <div class="insurer-logo">[ LOGO ]</div>
+      </div>
+      <p style="text-align:center;font-size:11.5px;color:var(--text-soft);margin-top:16px;">[ PENDIENTE — sustituir por logotipos reales de aseguradoras con convenio vigente confirmado. ]</p>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA / CONFIANZA (fusionadas) -->
+<section id="garantia" class="section-bg-light">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-media">
+        <div class="media-frame">
+          <img src="img/confianza-asesor-cliente.png" alt="Asesor de Clinical Pass mostrando en una tablet la gestión de la membresía a un cliente, en un ambiente de oficina cálido y transparente">
+        </div>
+      </div>
+      <div class="col-text">
+        <span class="eyebrow">TRANQUILIDAD, SIN LETRAS CHIQUITAS</span>
+        <h2>Confianza que <span class="accent">se nota en los detalles.</span></h2>
+        <div class="trust-list">
+          <div class="trust-block">
+            <div class="ic-round"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div>
+              <h3>Cancela cuando quieras</h3>
+              <p>Puedes cancelar tu membresía Clinical Pass en el momento que lo decidas. La única condición: si ya iniciaste un proceso de activación (autorización o cirugía en curso), debes concluirlo antes de cancelar. Así de simple.</p>
+            </div>
+          </div>
+          <div class="trust-block">
+            <div class="ic-round"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <h3>Manejo transparente de tu información y tu dinero</h3>
+              <p>Tus datos personales y el fondeo de tu deducible o coaseguro se gestionan de forma confidencial, únicamente para operar tu membresía Clinical Pass.</p>
+              <!-- ⚠ PENDIENTE — agregar aquí, solo si existen y están vigentes, sellos o menciones de cumplimiento real (por ejemplo, aviso de privacidad conforme a la LFPDPPP, o registro ante la autoridad correspondiente). -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas-frecuentes" class="section-bg-light">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">PREGUNTAS FRECUENTES</span>
+      <h2>Antes de que preguntes,<br><span class="accent">te respondemos.</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">¿Esto no lo cubre ya mi seguro de gastos médicos mayores?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>No necesariamente. Tu seguro cubre un porcentaje de tus gastos médicos, pero el deducible y el coaseguro son montos que tú debes pagar de tu bolsillo. Clinical Pass te ayuda a financiar y descontar precisamente esa parte que tu póliza no cubre.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Clinical Pass es un seguro o una aseguradora?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>No. Clinical Pass es una membresía — un beneficio médico complementario — y no un seguro de gastos médicos. No sustituye tu póliza: solo funciona si ya cuentas con un Seguro de Gastos Médicos Mayores vigente.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Qué pasa si nunca uso mi membresía?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>Puedes cancelarla en cualquier momento, siempre que no tengas un proceso de activación en curso. No hay penalización ni permanencia forzosa.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Cuánto puedo ahorrar realmente?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>El descuento va de $10,000 a $55,000 pesos, dependiendo del tipo de servicio y del hospital de la red donde te atiendas.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿En qué hospitales puedo usarla?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>Únicamente en los hospitales que forman parte de nuestra red en convenio: 47 hospitales en 17 estados de la República, incluyendo las principales zonas metropolitanas.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Cómo se aplica el descuento? ¿Es un trámite complicado?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="faq-a"><p>No. Nuestro equipo se encarga de todo: solo nos compartes tu carta autorización, INE, orden de internamiento y póliza vigente; nosotros gestionamos el resto y transferimos el fondeo directo a tu cuenta.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + LEAD FORM -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="final-cta">
+      <div>
+        <h2>Empieza a proteger<br>tu bolsillo desde hoy.</h2>
+        <p>$1,800 pesos al año. Hasta $55,000 pesos de respaldo. Un solo plan, sin letras chiquitas.</p>
+        <div class="cta-row">
+          <button class="btn btn-white btn-lg" onclick="openModal()">Obtener mi membresía</button>
+        </div>
+      </div>
+      <form class="lead-form" onsubmit="submitLead(event)">
+        <h3 style="color:var(--blue-dark);">Prefiero que me llamen</h3>
+        <label class="field-label" for="lead-nombre">Nombre completo</label>
+        <input id="lead-nombre" type="text" placeholder="Ej. Juan Pérez" required>
+        <label class="field-label" for="lead-telefono">Teléfono</label>
+        <input id="lead-telefono" type="tel" placeholder="Ej. 55 1234 5678" required>
+        <label class="field-label" for="lead-correo">Correo electrónico</label>
+        <input id="lead-correo" type="email" placeholder="Ej. nombre@correo.com" required>
+        <button type="submit" class="btn btn-dark btn-block">Solicitar contacto</button>
+        <p class="form-note" style="color:var(--text-soft);">Un asesor te contactará en menos de 24 horas.</p>
+        <!-- ⚠ PENDIENTE — enlazar a la página/documento real del Aviso de Privacidad cuando exista. -->
+        <p class="form-note" style="color:var(--text-soft);margin-top:6px;">Al solicitar contacto, aceptas nuestro <a href="#" style="color:var(--blue-primary);font-weight:600;">Aviso de Privacidad</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div style="background:#fff;border-radius:14px;padding:16px 20px;display:inline-block;">
+          <img src="img/hsa-logo-full.png" alt="Health Service Alliance" style="height:44px;width:auto;display:block;">
+        </div>
+        <span class="logo-text" style="display:block;margin-top:14px;"><span class="l2">CLINICAL PASS</span></span>
+        <p class="foot-desc">Clinical Pass es la membresía que complementa tu Seguro de Gastos Médicos Mayores, financiando tu deducible y coaseguro cuando más lo necesitas.</p>
+      </div>
+      <div>
+        <h5>Clinical Pass</h5>
+        <ul>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#red-hospitalaria">Red hospitalaria</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <!-- ⚠ PENDIENTE — correo, teléfono y WhatsApp (ver modal más abajo) son de ejemplo. Sustituir por los datos reales de contacto de Health Service Alliance antes de publicar. -->
+        <ul>
+          <li><a href="mailto:contacto@healthservicealliance.com">contacto@healthservicealliance.com</a></li>
+          <li><a href="tel:+528000000000">800 000 0000</a></li>
+          <li><a href="#contacto">Hablar con un asesor</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal-box">
+      <strong>[ AVISO LEGAL — PLACEHOLDER, PENDIENTE DE TEXTO FINAL DEL ABOGADO ]</strong><br>
+      Clinical Pass es un beneficio médico complementario operado por Health Service Alliance. No constituye, sustituye ni se comercializa como un seguro de gastos médicos mayores; solo aplica para titulares con una póliza de Seguro de Gastos Médicos Mayores vigente. Sustituir este bloque por el texto legal definitivo antes de publicar.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Health Service Alliance. Todos los derechos reservados.</span>
+      <span><a href="#" style="color:#8493B3;">Aviso de privacidad</a> · <a href="#" style="color:#8493B3;">Términos y condiciones</a></span>
+      <!-- ⚠ PENDIENTE — enlazar a las páginas/documentos reales de Aviso de Privacidad y Términos y Condiciones cuando existan. -->
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL: checkout aún no disponible -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="ic-round"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+    <h3>Pago en línea, muy pronto</h3>
+    <p>Estamos integrando el pago en línea para tu membresía. Mientras tanto, contáctanos directamente y te ayudamos a activarla hoy mismo.</p>
+    <!-- ⚠ PENDIENTE — el número de WhatsApp de abajo es de ejemplo (5218000000000). Sustituir por el número real antes de publicar. -->
+    <a href="https://wa.me/5218000000000" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Escríbenos por WhatsApp</a>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Cierra el menú móvil automáticamente si la ventana pasa a tamaño de escritorio
+  // (evita que el overlay se quede abierto y bloquee la página al rotar o redimensionar).
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+  });
+
+  function openModal(){ document.getElementById('modalOverlay').classList.add('open'); }
+  function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); }
+
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click', ()=>{
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  function submitLead(e){
+    e.preventDefault();
+    const form = e.target;
+    // ⚠ BLOQUEANTE PARA PUBLICAR — este formulario hoy SOLO simula un envío exitoso en el navegador.
+    // Los datos (nombre, teléfono, correo) no se están guardando ni enviando a ningún lado todavía.
+    // TODO (programador): antes de publicar, conectar este formulario a un backend real o a un CRM
+    // (por ejemplo vía un endpoint propio, Zapier/Make, HubSpot, o el CRM que use el equipo comercial),
+    // y agregar manejo de error visible al usuario si el envío falla.
+    form.innerHTML = '<p style="color:#0B4AA2;font-weight:700;text-align:center;padding:20px 0;">¡Gracias! Un asesor te contactará muy pronto.</p>';
+  }
+</script>
+
+</body>
+</html>
